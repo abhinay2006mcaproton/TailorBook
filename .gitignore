@@ -1,0 +1,50 @@
+# Built application files
+*.apk
+*.aar
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated build files
+bin/
+gen/
+out/
+build/
+app/build/
+*/build/
+
+# Gradle files
+.gradle/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Proguard / R8 mapping files
+app/build/outputs/mapping/
+
+# Android Studio / IntelliJ IDEA
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystores & sensitive signing keys (NEVER commit to public git!)
+*.jks
+*.keystore
+keystore/
+*.key
+
+# Sensitive credentials & secrets
+secrets.properties
+
+# Root level test screenshots
+/*.png
+
+# OS files
+.DS_Store
+Thumbs.db

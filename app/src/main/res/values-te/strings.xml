@@ -1,0 +1,480 @@
+<resources>
+    <!-- App Details -->
+    <string name="app_name">టైలర్‌బుక్</string>
+    <string name="app_tagline">టైలర్లు మరియు బొటిక్‌ల కొరకు స్మార్ట్ వ్యాపార యాప్</string>
+
+    <!-- Common Actions -->
+    <string name="action_save">సేవ్ చేయండి</string>
+    <string name="action_cancel">రద్దు చేయండి</string>
+    <string name="action_delete">తొలగించు</string>
+    <string name="action_edit">సవరించు</string>
+    <string name="action_search">వెతకండి</string>
+    <string name="action_retry">మళ్ళీ ప్రయత్నించండి</string>
+    <string name="action_close">మూసివేయి</string>
+    <string name="action_confirm">నిర్ధారించండి</string>
+    <string name="action_next">తరువాత</string>
+    <string name="action_back">వెనుకకు</string>
+    <string name="action_done">పూర్తయింది</string>
+    <string name="action_call">కాల్ చేయండి</string>
+    <string name="action_whatsapp">వాట్సాప్</string>
+    <string name="action_share">షేర్ చేయండి</string>
+    <string name="cd_navigation_menu">నావిగేషన్ మెనూ తెరవండి</string>
+
+    <!-- Navigation Drawer -->
+    <string name="nav_dashboard">డ్యాష్‌బోర్డ్</string>
+    <string name="nav_customers">కస్టమర్లు</string>
+    <string name="nav_measurements">కొలతలు</string>
+    <string name="nav_orders">ఆర్డర్లు</string>
+    <string name="nav_delivery_calendar">డెలివరీ క్యాలెండర్</string>
+    <string name="nav_payments">చెల్లింపులు</string>
+    <string name="nav_design_gallery">డిజైన్ గ్యాలరీ</string>
+    <string name="nav_reports">రిపోర్టులు</string>
+    <string name="nav_staff_management">సిబ్బంది నిర్వహణ</string>
+    <string name="nav_subscription">సబ్‌స్క్రిప్షన్ &amp; ప్రీమియం</string>
+    <string name="nav_notifications">నోటిఫికేషన్లు</string>
+    <string name="nav_settings">సెట్టింగ్‌లు</string>
+    <string name="nav_help_support">సహాయం &amp; మద్దతు</string>
+
+    <!-- Screen States -->
+    <string name="state_loading">లోడ్ అవుతోంది...</string>
+    <string name="state_empty_customers">కస్టమర్లు ఎవరూ లేరు</string>
+    <string name="state_empty_orders">ఆర్డర్లు ఏవీ లేవు</string>
+    <string name="state_error_generic">ఏదో తప్పు జరిగింది. దయచేసి మళ్ళీ ప్రయత్నించండి.</string>
+    <string name="state_offline_banner">ఆఫ్‌లైన్‌లో పనిచేస్తోంది — ఇంటర్నెట్ రాగానే సింక్ అవుతుంది</string>
+    <string name="state_syncing">క్లౌడ్‌కు సింక్ అవుతోంది...</string>
+    <string name="state_synced">డేటా అంతా భద్రపరచబడింది</string>
+
+    <!-- Order Statuses -->
+    <string name="status_new">కొత్తది</string>
+    <string name="status_cutting">కటింగ్</string>
+    <string name="status_stitching">కుట్టడం</string>
+    <string name="status_finishing">ఫినిషింగ్</string>
+    <string name="status_ready">డెలివరీకి సిద్ధం</string>
+    <string name="status_delivered">డెలివరీ పూర్తయింది</string>
+    <string name="status_cancelled">రద్దు చేయబడింది</string>
+
+    <!-- Garment Templates -->
+    <string name="garment_blouse">బ్లౌజ్</string>
+    <string name="garment_shirt">షర్ట్</string>
+    <string name="garment_tshirt">టీ-షర్ట్</string>
+    <string name="garment_pants">ప్యాంట్</string>
+    <string name="garment_kurti">కుర్తీ / కమీజ్</string>
+    <string name="garment_dress">డ్రెస్ / ఫ్రాక్</string>
+    <string name="garment_churidar">చుడీదార్ / సల్వార్</string>
+    <string name="garment_custom">ప్రత్యేక దుస్తులు</string>
+
+    <!-- Language Names -->
+    <string name="language_english">English</string>
+    <string name="language_telugu">తెలుగు</string>
+
+    <!-- Onboarding Carousel -->
+    <string name="onboarding_skip">దాటవేయి</string>
+    <string name="onboarding_get_started">ప్రారంభించండి</string>
+    <string name="onboarding_title_1">కస్టమర్లు &amp; కుటుంబ వివరాలు</string>
+    <string name="onboarding_desc_1">కస్టమర్ కాంటాక్ట్ వివరాలు, కుటుంబ సభ్యుల సమాచారం మరియు ఆర్డర్ల హిస్టరీ అంతా ఒకే చోట భద్రపరచండి.</string>
+    <string name="onboarding_title_2">కొలతలు ఎప్పటికీ మర్చిపోకండి</string>
+    <string name="onboarding_desc_2">బ్లౌజ్‌లు, డ్రెస్సులు, కుర్తీలు మరియు ప్యాంట్ల కొలతలను సురక్షితంగా రికార్డ్ చేయండి. పాత ఆర్డర్ కొలతలు మారవు.</string>
+    <string name="onboarding_title_3">ఆర్డర్ దశలు &amp; డెలివరీ ట్రాకింగ్</string>
+    <string name="onboarding_desc_3">కటింగ్ నుండి డెలివరీ వరకు ప్రతి దశనూ సులభంగా ట్రాక్ చేయండి. సకాలంలో డెలివరీలు అందించి కస్టమర్ల మెప్పు పొందండి.</string>
+    <string name="onboarding_title_4">100% ఆఫ్‌లైన్ &amp; క్లౌడ్ బ్యాకప్</string>
+    <string name="onboarding_desc_4">ఇంటర్నెట్ లేకపోయినా మీ దుకాణంలో సజావుగా పనిచేస్తుంది. నెట్‌వర్క్ రాగానే డేటా ఆటోమేటిక్‌గా క్లౌడ్‌కు సింక్ అవుతుంది.</string>
+    <!-- Language Selection Screen -->
+    <string name="lang_select_title">మీ భాషను ఎంచుకోండి</string>
+    <string name="lang_select_subtitle">మీకు అనుకూలమైన భాషను ఎంచుకోండి. దీన్ని ఎప్పుడైనా సెట్టింగ్‌లలో మార్చుకోవచ్చు.</string>
+    <string name="lang_english_title">English</string>
+    <string name="lang_english_desc">టైలర్‌బుక్‌ను ఇంగ్లీష్‌లో ఉపయోగించండి</string>
+    <string name="lang_telugu_title">తెలుగు</string>
+    <string name="lang_telugu_desc">టైలర్‌బుక్‌ను తెలుగులో ఉపయోగించండి</string>
+    <string name="action_continue">కొనసాగించండి</string>
+    <!-- Shop Registration Screen -->
+    <string name="shop_reg_title">మీ దుకాణాన్ని నమోదు చేయండి</string>
+    <string name="shop_reg_subtitle">ప్రారంభించడానికి మీ టైలరింగ్ లేదా బొటిక్ వివరాలను నమోదు చేయండి.</string>
+    <string name="shop_reg_field_shop_name">దుకాణం / బొటిక్ పేరు</string>
+    <string name="shop_reg_field_shop_name_hint">ఉదా: శ్రీ లక్ష్మి బొటిక్</string>
+    <string name="shop_reg_field_owner_name">యజమాని / మాస్టర్ టైలర్ పేరు</string>
+    <string name="shop_reg_field_owner_name_hint">ఉదా: రమేష్ కుమార్</string>
+    <string name="shop_reg_field_phone">మొబైల్ నంబర్</string>
+    <string name="shop_reg_field_phone_hint">10 అంకెల మొబైల్ నంబర్</string>
+    <string name="shop_reg_field_business_type">వ్యాపార రకం</string>
+    <string name="shop_reg_type_women">లేడీస్ బొటిక్ &amp; బ్లౌజ్‌లు</string>
+    <string name="shop_reg_type_men">జెంట్స్ టైలరింగ్ &amp; సూట్లు</string>
+    <string name="shop_reg_type_family">ఫ్యామిలీ &amp; యూనిసెక్స్ టైలరింగ్</string>
+    <string name="shop_reg_type_designer">డిజైనర్ &amp; పెళ్ళిళ్ల దుస్తులు</string>
+    <string name="shop_reg_btn_submit">దుకాణ ప్రొఫైల్ సృష్టించండి</string>
+    <string name="shop_reg_error_shop_name">దయచేసి సరైన దుకాణం పేరు నమోదు చేయండి (కనీసం 3 అక్షరాలు)</string>
+    <string name="shop_reg_error_owner_name">దయచేసి యజమాని పేరు నమోదు చేయండి</string>
+    <string name="shop_reg_error_phone">దయచేసి సరైన 10 అంకెల మొబైల్ నంబర్ నమోదు చేయండి</string>
+    <!-- Login & OTP Screen -->
+    <string name="login_title">స్వాగతం</string>
+    <string name="login_subtitle">మీ టైలర్‌బుక్ వ్యాపార ఖాతాలోకి ప్రవేశించండి</string>
+    <string name="login_field_phone">నమోదిత మొబైల్ నంబర్</string>
+    <string name="login_field_phone_hint">10 అంకెల మొబైల్ నంబర్ నమోదు చేయండి</string>
+    <string name="login_btn_send_otp">ఓటీపీ పంపండి</string>
+    <string name="login_link_new_user">కొత్త ఖాతానా? దుకాణాన్ని నమోదు చేయండి</string>
+    <string name="login_link_existing_user">ఖాతా ఉందా? లాగిన్ అవ్వండి</string>
+    <string name="otp_title">మొబైల్ నంబర్ నిర్ధారణ</string>
+    <string name="otp_subtitle">+91 %1$s కు పంపిన 6 అంకెల ఓటీపీని నమోదు చేయండి</string>
+    <string name="otp_field_label">6 అంకెల ఓటీపీ</string>
+    <string name="otp_btn_verify">నిర్ధారించి లాగిన్ అవ్వండి</string>
+    <string name="otp_resend">ఓటీపీ మళ్ళీ పంపండి</string>
+    <string name="otp_resend_timer">%1$d సెకన్లలో ఓటీపీ మళ్ళీ పొందవచ్చు</string>
+    <string name="otp_change_number">మొబైల్ నంబర్ మార్చండి</string>
+    <string name="otp_error_invalid">దయచేసి సరైన 6 అంకెల ఓటీపీని నమోదు చేయండి</string>
+    <!-- Shop Profile & Settings Screen -->
+    <string name="shop_profile_title">షాప్ సెట్టింగ్‌లు &amp; వేళలు</string>
+    <string name="shop_profile_subtitle">మీ బోటిక్ పని వేళలు, కొలత యూనిట్ మరియు డెలివరీ సమయాన్ని సెట్ చేయండి</string>
+    <string name="shop_profile_section_hours">పని వేళలు &amp; షెడ్యూల్</string>
+    <string name="shop_profile_field_opening">ప్రారంభ సమయం</string>
+    <string name="shop_profile_field_closing">ముగింపు సమయం</string>
+    <string name="shop_profile_field_weekly_off">వారపు సెలవు దినం</string>
+    <string name="shop_profile_day_sunday">ఆదివారం</string>
+    <string name="shop_profile_day_monday">సోమవారం</string>
+    <string name="shop_profile_day_tuesday">మంగళవారం</string>
+    <string name="shop_profile_day_wednesday">బుధవారం</string>
+    <string name="shop_profile_day_thursday">గురువారం</string>
+    <string name="shop_profile_day_friday">శుక్రవారం</string>
+    <string name="shop_profile_day_saturday">శనివారం</string>
+    <string name="shop_profile_day_none">సెలవు లేదు (7 రోజులు)</string>
+    <string name="shop_profile_section_preferences">ప్రాధాన్యతలు &amp; యూనిట్లు</string>
+    <string name="shop_profile_field_unit">డిఫాల్ట్ కొలత యూనిట్</string>
+    <string name="shop_profile_unit_inch">అంగుళాలు (Inches)</string>
+    <string name="shop_profile_unit_cm">సెంటీమీటర్లు (cm)</string>
+    <string name="shop_profile_field_currency">కరెన్సీ చిహ్నం</string>
+    <string name="shop_profile_field_lead_days">ప్రామాణిక డెలివరీ సమయం (రోజులు)</string>
+    <string name="shop_profile_section_additional">చిరునామా &amp; పన్ను (ఐచ్ఛికం)</string>
+    <string name="shop_profile_field_address">షాప్ చిరునామా / ల్యాండ్‌మార్క్</string>
+    <string name="shop_profile_field_address_hint">ఉదా: షాప్ నం. 4, మార్కెట్ రోడ్, క్లాక్ టవర్ దగ్గర</string>
+    <string name="shop_profile_field_gstin">GSTIN / పన్ను గుర్తింపు సంఖ్య</string>
+    <string name="shop_profile_field_gstin_hint">ఉదా: 36AAAAA0000A1Z5</string>
+    <string name="shop_profile_btn_save">సేవ్ చేసి డాష్‌బోర్డ్‌కి వెళ్లండి</string>
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">డాష్‌బోర్డ్</string>
+    <string name="dashboard_metric_active_orders">ప్రస్తుత ఆర్డర్‌లు</string>
+    <string name="dashboard_metric_due_today">ఈరోజు డెలివరీలు</string>
+    <string name="dashboard_metric_overdue">గడువు దాటినవి</string>
+    <string name="dashboard_metric_ready">సిద్ధం</string>
+    <string name="dashboard_metric_pending_balance">బాకీ మొత్తం</string>
+    <string name="dashboard_quick_actions">త్వరిత చర్యలు</string>
+    <string name="dashboard_action_new_order">కొత్త ఆర్డర్</string>
+    <string name="dashboard_action_new_customer">కొత్త కస్టమర్</string>
+    <string name="dashboard_action_new_measure">కొత్త కొలత</string>
+    <string name="dashboard_action_record_payment">చెల్లింపు నమోదు</string>
+    <string name="dashboard_deliveries_title">ఈరోజు డెలివరీలు</string>
+    <string name="dashboard_deliveries_empty">ఈరోజుకి డెలివరీలు ఏమీ లేవు</string>
+    <string name="dashboard_call_action">కాల్</string>
+    <string name="dashboard_whatsapp_action">వాట్సాప్</string>
+    <!-- Order Statuses -->
+    <string name="order_status_new">కొత్తది</string>
+    <string name="order_status_cutting">కటింగ్</string>
+    <string name="order_status_stitching">స్టిచ్చింగ్</string>
+    <string name="order_status_finishing">ఫినిషింగ్</string>
+    <string name="order_status_ready">సిద్ధం</string>
+    <string name="order_status_delivered">డెలివరీ అయింది</string>
+    <string name="order_status_cancelled">రద్దు చేయబడింది</string>
+    <!-- Customers Module -->
+    <string name="customers_title">కస్టమర్లు</string>
+    <string name="customers_search_hint">పేరు లేదా ఫోన్ నంబర్ ద్వారా శోధించండి...</string>
+    <string name="customers_empty_title">ఇంకా కస్టమర్లు లేరు</string>
+    <string name="customers_empty_desc">మీ మొదటి కస్టమర్ వివరాలను జోడించడానికి + నొక్కండి</string>
+    <string name="customers_btn_add">కస్టమర్‌ను జోడించండి</string>
+    <string name="customers_family_count">%1$d కుటుంబ సభ్యులు</string>
+    <string name="customers_add_title">కొత్త కస్టమర్</string>
+    <string name="customers_add_subtitle">కస్టమర్ సంప్రదింపు వివరాలను నమోదు చేయండి</string>
+    <string name="customers_field_name">కస్టమర్ పూర్తి పేరు</string>
+    <string name="customers_field_phone">ప్రధాన మొబైల్ నంబర్</string>
+    <string name="customers_field_alt_phone">మరొక ఫోన్ నంబర్ (ఐచ్ఛికం)</string>
+    <string name="customers_field_gender">లింగం</string>
+    <string name="customers_gender_female">స్త్రీ</string>
+    <string name="customers_gender_male">పురుషుడు</string>
+    <string name="customers_gender_other">ఇతర</string>
+    <string name="customers_field_address">చిరునామా / ప్రాంతం</string>
+    <string name="customers_field_notes">గమనికలు / ప్రాధాన్యతలు</string>
+    <string name="customers_btn_save">కస్టమర్ ప్రొఫైల్ సేవ్ చేయండి</string>
+    <string name="customers_error_name">దయచేసి కస్టమర్ పేరు నమోదు చేయండి (కనీసం 2 అక్షరాలు)</string>
+    <string name="customers_error_phone">దయచేసి సరైన 10 అంకెల మొబైల్ నంబర్ నమోదు చేయండి</string>
+    <!-- Customer Profile & Family Management -->
+    <string name="customer_profile_title">కస్టమర్ ప్రొఫైల్</string>
+    <string name="customer_profile_edit">ప్రొఫైల్ సవరణ</string>
+    <string name="customer_profile_orders_count">మొత్తం ఆర్డర్‌లు</string>
+    <string name="customer_profile_lifetime_value">మొత్తం వ్యాపారం</string>
+    <string name="customer_profile_pending_balance">బాకీ మొత్తం</string>
+    <string name="customer_profile_family_title">కుటుంబ సభ్యులు</string>
+    <string name="customer_profile_add_family">+ కుటుంబ సభ్యుడిని చేర్చండి</string>
+    <string name="customer_profile_no_family">ఇంకా కుటుంబ సభ్యులు జోడించబడలేదు</string>
+    <string name="customer_profile_measurements_title">కొలతలు</string>
+    <string name="customer_profile_action_new_measure">+ కొత్త కొలత</string>
+    <string name="customer_profile_action_new_order">+ కొత్త ఆర్డర్</string>
+    <string name="customer_profile_delete_btn">కస్టమర్‌ను దాచండి (ఆర్కైవ్)</string>
+    <string name="customer_profile_delete_dialog_title">ఈ కస్టమర్‌ను ఆర్కైవ్ చేయాలా?</string>
+    <string name="customer_profile_delete_dialog_msg">కస్టమర్ యాక్టివ్ జాబితా నుండి దాచబడతారు. గత ఆర్డర్‌లు మరియు కొలతల రికార్డులు అలాగే ఉంటాయి.</string>
+    <string name="family_member_add_title">కుటుంబ సభ్యుడిని చేర్చండి</string>
+    <string name="family_member_name_hint">సభ్యుడి పేరు (ఉదా: సాన్వి)</string>
+    <string name="family_member_relation_hint">సంబంధం (ఉదా: కుమార్తె, భార్య, తల్లి)</string>
+    <string name="family_member_btn_save">సభ్యుడిని చేర్చండి</string>
+    <string name="family_member_limit_reached_title">కుటుంబ సభ్యుల పరిమితి పూర్తయింది (5/5)</string>
+    <string name="family_member_limit_reached_desc">ఈ కస్టమర్‌కి గరిష్టంగా అనుమతించబడిన 5 కుటుంబ సభ్యుల పరిమితి చేరుకుంది.</string>
+    <string name="family_member_watch_ad_title">కుటుంబ సభ్యుడి స్లాట్‌ను అన్‌లాక్ చేయండి</string>
+    <string name="family_member_watch_ad_desc">ఈ కస్టమర్‌కు కుటుంబ సభ్యుడిని చేర్చడానికి చిన్న వీడియో ప్రకటనను చూడండి (గరిష్టంగా 5 సభ్యులు).</string>
+    <string name="family_member_watch_ad_btn">వీడియో ప్రకటన చూడండి</string>
+    <string name="customer_edit_title">కస్టమర్ వివరాలు సవరణ</string>
+    <string name="customer_edit_btn_save">వివరాలు నవీకరించండి</string>
+
+    <!-- Phase 06: Measurements Engine & Garment Templates -->
+    <string name="measurement_templates_title">దుస్తుల రకాన్ని ఎంచుకోండి</string>
+    <string name="measurement_templates_subtitle">కొలతలు నమోదు చేయడానికి లేదా చూడటానికి దుస్తులను ఎంచుకోండి</string>
+    <string name="measurement_entry_title">కొలతల నమోదు</string>
+    <string name="measurement_history_title">కొలతల చరిత్ర</string>
+    <string name="measurement_compare_title">వెర్షన్ల పోలిక</string>
+    <string name="measurement_version_badge">వెర్షన్ %1$d</string>
+    <string name="measurement_save_btn">కొలతల వెర్షన్‌ను భద్రపరచండి</string>
+    <string name="measurement_field_notes">ఫిట్టింగ్ మరియు కుట్టు సూచనలు (ఐచ్ఛికం)</string>
+    <string name="measurement_no_records">ఈ దుస్తులకు ఇంకా కొలతలు నమోదు కాలేదు.</string>
+    <string name="measurement_take_new">+ కొత్త వెర్షన్ నమోదు</string>
+    <string name="measurement_diff_heading">వెర్షన్ మార్పులు</string>
+    <string name="measurement_diff_unchanged">మార్పు లేదు</string>
+
+    <!-- Phase 07: Gallery & Camera Module -->
+    <string name="gallery_title">డిజైన్ గ్యాలరీ</string>
+    <string name="gallery_subtitle">బొటిక్ కేటలాగ్ &amp; క్లయింట్ సూచనలు</string>
+    <string name="gallery_add_photo">ఫోటో జోడించండి</string>
+    <string name="gallery_camera">ఫోటో తీయండి</string>
+    <string name="gallery_pick">గ్యాలరీ నుండి ఎంచుకోండి</string>
+    <string name="gallery_tag_all">అన్నీ</string>
+    <string name="gallery_tag_neck">మెడ డిజైన్</string>
+    <string name="gallery_tag_sleeve">స్లీవ్స్</string>
+    <string name="gallery_tag_embroidery">ఎంబ్రాయిడరీ</string>
+    <string name="gallery_tag_maggam">మగ్గం వర్క్</string>
+    <string name="gallery_tag_border">బోర్డర్ / లేస్</string>
+    <string name="gallery_tag_blouse">బ్లౌజ్</string>
+    <string name="gallery_tag_kurti">కుర్తీ</string>
+    <string name="gallery_tag_lehenga">లెహంగా</string>
+    <string name="gallery_no_photos">ఇంకా డిజైన్ ఫోటోలు లేవు</string>
+    <string name="gallery_no_photos_desc">క్లయింట్లకు చూపించడానికి మెడ నమూనాలు, స్లీవ్ స్టైల్స్ మరియు ఎంబ్రాయిడరీ వర్క్ ఫోటోలను క్యాప్చర్ చేయండి.</string>
+    <string name="photo_details_title">ఫోటో వివరాలు</string>
+    <string name="photo_notes_hint">నోట్స్ &amp; స్టైల్ సూచనలు...</string>
+    <string name="photo_tags_label">ట్యాగ్‌లు</string>
+    <string name="photo_link_customer">లింక్ చేసిన కస్టమర్</string>
+    <string name="photo_delete">ఫోటో తొలగించండి</string>
+    <string name="photo_save">మార్పులను సేవ్ చేయండి</string>
+    <string name="photo_delete_confirm">మీరు ఖచ్చితంగా ఈ డిజైన్ ఫోటోను తొలగించాలనుకుంటున్నారా?</string>
+
+    <!-- Phase 08: Order Management -->
+    <string name="orders_title">ఆర్డర్‌లు</string>
+    <string name="orders_tab_all">అన్నీ</string>
+    <string name="orders_tab_new">కొత్తవి</string>
+    <string name="orders_tab_in_progress">పనిలో ఉంది</string>
+    <string name="orders_tab_ready">సిద్ధంగా ఉంది</string>
+    <string name="orders_tab_delivered">డెలివరీ అయింది</string>
+    <string name="order_create_title">కొత్త ఆర్డర్</string>
+    <string name="order_create_subtitle">కొలతల స్నాప్‌షాట్‌తో ఆర్డర్ నమోదు చేయండి</string>
+    <string name="order_details_title">ఆర్డర్ వివరాలు</string>
+    <string name="order_status_update">స్థితి మార్చండి</string>
+    <string name="order_cancel">ఆర్డర్ రద్దు</string>
+    <string name="order_stitching_instructions">కుట్టు సూచనలు</string>
+    <string name="order_fabric_details">వస్త్రం &amp; మెటీరియల్ వివరాలు</string>
+    <string name="order_delivery_date">డెలివరీ తేదీ</string>
+    <string name="order_total_price">మొత్తం ధర</string>
+    <string name="order_advance_paid">చెల్లించిన అడ్వాన్స్</string>
+    <string name="order_balance_due">మిగిలిన బాకీ</string>
+    <string name="order_no_orders">ఆర్డర్‌లు లేవు</string>
+    <string name="order_no_orders_desc">కుట్టు పురోగతి మరియు డెలివరీ షెడ్యూల్‌ను ట్రాక్ చేయడానికి క్లయింట్ ఆర్డర్‌లను బుక్ చేయండి.</string>
+
+    <!-- Phase 09: Delivery Calendar -->
+    <string name="calendar_title">డెలివరీ క్యాలెండర్</string>
+    <string name="calendar_subtitle">రోజువారీ &amp; నెలవారీ డెలివరీ షెడ్యూల్‌లు</string>
+    <string name="calendar_today">ఈరోజు</string>
+    <string name="calendar_reschedule">రీషెడ్యూల్</string>
+    <string name="calendar_reschedule_title">డెలివరీ రీషెడ్యూల్</string>
+    <string name="calendar_reschedule_subtitle">ఈ ఆర్డర్ కోసం వాగ్దానం చేసిన డెలివరీ తేదీని మార్చండి</string>
+    <string name="calendar_reschedule_reason">రీషెడ్యూల్ కారణం (ఐచ్ఛికం)</string>
+    <string name="calendar_filter_all">అన్నీ</string>
+    <string name="calendar_filter_due">పెండింగ్</string>
+    <string name="calendar_filter_overdue">గడువు ముగిసినవి</string>
+    <string name="calendar_filter_delivered">డెలివరీ అయినవి</string>
+    <string name="calendar_no_deliveries">ఈ రోజు డెలివరీలు లేవు</string>
+    <string name="calendar_no_deliveries_desc">వేరొక తేదీని ఎంచుకోండి లేదా ఈ డెలివరీ తేదీతో కొత్త ఆర్డర్‌ను బుక్ చేయండి.</string>
+    <string name="calendar_confirm_reschedule">రీషెడ్యూల్ నిర్ధారించండి</string>
+    <string name="calendar_quick_days_1">+1 రోజు</string>
+    <string name="calendar_quick_days_2">+2 రోజులు</string>
+    <string name="calendar_quick_days_3">+3 రోజులు</string>
+    <string name="calendar_quick_days_7">+1 వారం</string>
+
+    <!-- Phase 10: Payments & Balances -->
+    <string name="payments_title">చెల్లింపులు &amp; బాకీలు</string>
+    <string name="payments_subtitle">ఖాతా పుస్తకం, రశీదులు &amp; బాకీలు</string>
+    <string name="payments_record_title">చెల్లింపు నమోదు</string>
+    <string name="payments_record_subtitle">క్లయింట్ నుండి అడ్వాన్స్ లేదా మిగిలిన బాకీ స్వీకరించండి</string>
+    <string name="payments_total_outstanding">మొత్తం మిగిలిన బాకీ</string>
+    <string name="payments_total_collected">మొత్తం వసూలు అయినది</string>
+    <string name="payments_method_cash">నగదు</string>
+    <string name="payments_method_upi">UPI</string>
+    <string name="payments_method_bank">బ్యాంక్</string>
+    <string name="payments_method_cheque">చెక్</string>
+    <string name="payments_method_other">ఇతరాలు</string>
+    <string name="payments_amount">చెల్లింపు మొత్తం (₹)</string>
+    <string name="payments_ref_number">లావాదేవీ / రిఫరెన్స్ # (ఐచ్ఛికం)</string>
+    <string name="payments_notes">రశీదు నోట్ (ఐచ్ఛికం)</string>
+    <string name="payments_share_receipt">రశీదు షేర్ చేయండి</string>
+    <string name="payments_full_balance">పూర్తి బాకీ</string>
+    <string name="payments_receipt_title">చెల్లింపు రశీదు</string>
+    <string name="payments_outstanding_list">కస్టమర్ వారీగా మిగిలిన బాకీలు</string>
+    <string name="payments_recent_transactions">చెల్లింపుల చరిత్ర</string>
+    <string name="payments_send_reminder">వాట్సాప్ రిమైండర్ పంపండి</string>
+    <string name="payments_no_dues">అన్నీ పూర్తయ్యాయి! బాకీలు ఏవీ లేవు.</string>
+    <string name="payments_no_transactions">ఇంకా చెల్లింపులు నమోదు కాలేదు.</string>
+
+    <!-- Phase 11: Analytics, Reports & Notifications -->
+    <string name="reports_title">నివేదికలు &amp; విశ్లేషణ</string>
+    <string name="reports_subtitle">వ్యాపార సమాచారం &amp; ఆర్థిక ట్రెండ్స్</string>
+    <string name="reports_range_today">ఈరోజు</string>
+    <string name="reports_range_week">ఈ వారం</string>
+    <string name="reports_range_month">ఈ నెల</string>
+    <string name="reports_range_year">ఈ సంవత్సరం</string>
+    <string name="reports_booked_value">బుకింగ్ విలువ</string>
+    <string name="reports_collected_cash">నగదు వసూలు</string>
+    <string name="reports_punctuality">సమయానికి డెలివరీ</string>
+    <string name="reports_orders_breakdown">ఆర్డర్ల స్థితి వివరణ</string>
+    <string name="reports_popular_garments">ప్రముఖ దుస్తులు</string>
+    <string name="reports_share_summary">సారాంశం షేర్ చేయండి</string>
+    <string name="notifications_title">నోటిఫికేషన్లు</string>
+    <string name="notifications_subtitle">డెలివరీ హెచ్చరికలు, బాకీలు &amp; రిమైండర్‌లు</string>
+    <string name="notifications_empty">హెచ్చరికలు ఏవీ లేవు</string>
+    <string name="notifications_empty_desc">డెలివరీ గడువు మరియు చెల్లింపు రిమైండర్‌లు ఇక్కడ కనిపిస్తాయి.</string>
+    <string name="notifications_mark_all_read">అన్నీ క్లియర్ చేయండి</string>
+    <string name="notifications_type_due_today">ఈరోజే డెలివరీ గడువు</string>
+    <string name="notifications_type_due_tomorrow">రేపు డెలివరీ గడువు</string>
+    <string name="notifications_type_overdue">డెలివరీ గడువు ముగిసింది!</string>
+    <string name="notifications_type_balance">చెల్లింపు బాకీ రిమైండర్</string>
+
+    <!-- Phase 12: Staff Management -->
+    <string name="staff_title">సిబ్బంది నిర్వహణ</string>
+    <string name="staff_subtitle">బృంద సభ్యులు, పాత్రలు &amp; అనుమతులు</string>
+    <string name="staff_add">సిబ్బందిని జోడించండి</string>
+    <string name="staff_empty">ఇంకా సిబ్బంది జోడించబడలేదు</string>
+    <string name="staff_empty_desc">పనులను కేటాయించడానికి మరియు ట్రాక్ చేయడానికి టైలర్లు, కట్టర్లు మరియు మేనేజర్లను జోడించండి.</string>
+    <string name="staff_role_owner">యజమాని</string>
+    <string name="staff_role_manager">మేనేజర్</string>
+    <string name="staff_role_tailor">మాస్టర్ టైలర్</string>
+    <string name="staff_role_worker">సహాయకుడు / కట్టర్</string>
+    <string name="staff_active">యాక్టివ్</string>
+    <string name="staff_inactive">నిలిపివేయబడింది</string>
+    <string name="staff_name_hint">సిబ్బంది పూర్తి పేరు</string>
+    <string name="staff_phone_hint">మొబైల్ నంబర్</string>
+    <string name="staff_save_btn">సిబ్బందిని సేవ్ చేయండి</string>
+    <string name="staff_toggle_status">యాక్సెస్ మార్చండి</string>
+
+    <!-- Phase 13: Subscription & Monetization -->
+    <string name="subscription_title">సబ్‌స్క్రిప్షన్ &amp; ప్లాన్‌లు</string>
+    <string name="subscription_subtitle">ప్రో బొటిక్ &amp; యాడ్స్ రహిత అనుభవం</string>
+    <string name="subscription_choose_plan">సబ్‌స్క్రిప్షన్ ప్లాన్‌ను ఎంచుకోండి</string>
+    <string name="subscription_upgrade_cta">ప్రో బొటిక్‌కి అప్‌గ్రేడ్ చేయండి (%1$s%2$s)</string>
+    <string name="subscription_restore_btn">మునుపటి కొనుగోళ్లను పునరుద్ధరించండి</string>
+    <string name="subscription_cancel_btn">సబ్‌స్క్రిప్షన్ రద్దు చేయండి / ఉచిత ప్లాన్‌కు మారండి</string>
+    <string name="subscription_comparison_title">ప్లాన్ ప్రయోజనాలు &amp; ఫీచర్లు</string>
+    <string name="subscription_success_title">ప్రో బొటిక్ యాక్టివేట్ చేయబడింది! 👑</string>
+    <string name="subscription_start_using">ప్రో ఫీచర్లను ఉపయోగించండి</string>
+    <string name="subscription_cancel_confirm_title">ఉచిత ప్లాన్‌కు మారడాన్ని నిర్ధారించండి</string>
+    <string name="subscription_cancel_confirm_desc">మీరు ప్రో బొటిక్ సబ్‌స్క్రిప్షన్‌ను రద్దు చేయాలనుకుంటున్నారా? మీరు ఉచిత యాడ్-సపోర్టెడ్ ప్లాన్‌కు తిరిగి వెళతారు. మీ ఆఫ్‌లైన్ కస్టమర్ డేటా 100% సురక్షితంగా ఉంటుంది.</string>
+    <string name="subscription_confirm_downgrade">అవును, ఉచిత ప్లాన్‌కు మారండి</string>
+
+    <!-- Authentication & Email Login -->
+    <string name="auth_tab_email">ఇమెయిల్ లాగిన్</string>
+    <string name="auth_tab_phone">ఫోన్ OTP</string>
+    <string name="auth_phone_unavailable_notice">ఫోన్ వెరిఫికేషన్ ఇంకా అందుబాటులో లేదు. దయచేసి ప్రస్తుతం ఇమెయిల్ ద్వారా లాగిన్ అవ్వండి.</string>
+    <string name="auth_label_email">ఇమెయిల్ చిరునామా</string>
+    <string name="auth_label_password">పాస్‌వర్డ్</string>
+    <string name="auth_label_confirm_password">పాస్‌వర్డ్ నిర్ధారించండి</string>
+    <string name="auth_btn_login">సైన్ ఇన్</string>
+    <string name="auth_btn_register">కొత్త బొటిక్ నమోదు</string>
+    <string name="auth_link_forgot_password">పాస్‌వర్డ్ మర్చిపోయారా?</string>
+    <string name="auth_link_need_account">ఖాతా లేదా? నమోదు చేసుకోండి</string>
+    <string name="auth_link_already_have_account">ఇప్పటికే ఖాతా ఉందా? సైన్ ఇన్ చేయండి</string>
+    <string name="auth_forgot_title">పాస్‌వర్డ్ రీసెట్</string>
+    <string name="auth_forgot_desc">6 అంకెల ధృవీకరణ కోడ్ పొందడానికి మీ ఇమెయిల్ నమోదు చేయండి.</string>
+    <string name="auth_forgot_btn_send_otp">6 అంకెల కోడ్ పంపండి</string>
+    <string name="auth_label_otp">6-అంకెల కోడ్</string>
+    <string name="auth_label_new_password">కొత్త పాస్‌వర్డ్</string>
+    <string name="auth_btn_reset_password">పాస్‌వర్డ్ మార్చండి</string>
+
+    <!-- Monetization & Entitlement Dialogs -->
+    <string name="entitlement_unlock_title">మీ వ్యాపారం ఎదుగుతోంది! ✂️</string>
+    <string name="entitlement_unlock_desc">మీరు మీ 10 ఉచిత కస్టమర్ స్లాట్‌లను ఉపయోగించారు. మీ తదుపరి కస్టమర్‌ను అన్‌లాక్ చేయడానికి ఒక చిన్న వీడియో ప్రకటనను చూడండి. మా ఉచిత యాడ్-సపోర్టెడ్ ఆప్షన్‌తో మీరు 20 కస్టమర్‌ల వరకు జోడించవచ్చు.</string>
+    <string name="entitlement_btn_watch_ad">వీడియో చూసి కస్టమర్‌ని జోడించండి</string>
+    <string name="entitlement_btn_upgrade">ప్రీమియంకు అప్‌గ్రేడ్ చేయండి</string>
+    <string name="entitlement_btn_not_now">ఇప్పుడు కాదు</string>
+    <string name="entitlement_limit_reached_title">కస్టమర్ పరిమితి ముగిసింది (20/20) 👑</string>
+    <string name="entitlement_limit_reached_desc">మీరు ఉచిత ప్లాన్‌లో గరిష్టంగా 20 మంది కస్టమర్‌ల పరిమితిని చేరుకున్నారు. అపరిమిత కస్టమర్‌లు, యాడ్స్ రహిత అనుభవం కోసం టైలర్‌బుక్ ప్రీమియంకు అప్‌గ్రేడ్ చేయండి.</string>
+    <string name="entitlement_btn_maybe_later">తర్వాత చూద్దాం</string>
+    <string name="ad_loading">వీడియో ప్రకటన లోడ్ అవుతోంది, దయచేసి వేచి ఉండండి…</string>
+    <string name="ad_failed_load">వీడియో ప్రకటన అందుబాటులో లేదు. దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేయండి లేదా ప్రీమియంకు అప్‌గ్రేడ్ చేయండి.</string>
+    <string name="ad_skipped">వీడియో పూర్తి కాకముందే మూసివేయబడింది. మీ తదుపరి కస్టమర్‌ను అన్‌లాక్ చేయడానికి పూర్తి వీడియోను చూడండి.</string>
+    <string name="ad_reward_verified">రివార్డ్ ధృవీకరించబడింది! కస్టమర్ స్లాట్ అన్‌లాక్ చేయబడింది.</string>
+
+    <!-- Operational Limits & Gating -->
+    <string name="entitlement_active_order_limit_title">యాక్టివ్ ఆర్డర్ల పరిమితి ముగిసింది (15/15) 📋</string>
+    <string name="entitlement_active_order_limit_desc">మీకు 15 యాక్టివ్ ఆర్డర్లు ఉన్నాయి! పెండింగ్ ఆర్డర్‌లను పూర్తి చేయండి లేదా అపరిమిత ఆర్డర్ల కోసం టైలర్‌బుక్ ప్రోకి అప్‌గ్రేడ్ చేయండి.</string>
+    <string name="entitlement_staff_limit_title">సిబ్బంది పరిమితి ముగిసింది (1/1) ✂️</string>
+    <string name="entitlement_staff_limit_desc">ఉచిత ప్లాన్‌లో 1 సిబ్బందికి మాత్రమే అనుమతి ఉంది. అపరిమిత కటింగ్ మాస్టర్లు, టైలర్లను చేర్చడానికి టైలర్‌బుక్ ప్రోకి అప్‌గ్రేడ్ చేయండి!</string>
+    <string name="entitlement_photo_limit_title">ఫోటోల పరిమితి ముగిసింది (1/1) 📷</string>
+    <string name="entitlement_photo_limit_desc">ఉచిత ప్లాన్‌లో ఒక్కో ఆర్డర్‌కు 1 డిజైన్ ఫోటోకు మాత్రమే అనుమతి ఉంది. 5 ఫోటోల వరకు జోడించడానికి టైలర్‌బుక్ ప్రోకి అప్‌గ్రేడ్ చేయండి!</string>
+    <string name="entitlement_reports_export_title">ప్రో బిజినెస్ ఎక్స్‌పోర్ట్ 👑</string>
+    <string name="entitlement_reports_export_desc">పూర్తి GST లెడ్జర్‌లు మరియు ఆర్డర్ ఖాతాలను ఎక్సెల్/PDF లోకి ఎక్స్‌పోర్ట్ చేయడం టైలర్‌బుక్ ప్రో ఫీచర్. ఇప్పుడే అప్‌గ్రేడ్ చేయండి!</string>
+
+    <!-- Cloud Backup via Rewarded Ad -->
+    <string name="backup_cloud_title">క్లౌడ్ బ్యాకప్ &amp; డేటా రక్షణ</string>
+    <string name="backup_pro_status">రియల్-టైమ్ సుపాబేస్ క్లౌడ్ బ్యాకప్ (యాక్టివ్)</string>
+    <string name="backup_free_status">లోకల్ డివైస్ నిల్వ (యాడ్ చూసి బ్యాకప్ చేసుకోవచ్చు)</string>
+    <string name="backup_btn_now">డేటాబేస్‌ను క్లౌడ్‌లోకి బ్యాకప్ చేయండి</string>
+    <string name="backup_dialog_title">షాప్ డేటాబేస్ బ్యాకప్ ☁️</string>
+    <string name="backup_dialog_desc">మీ కస్టమర్లు, కొలతలు మరియు ఆర్డర్లను ఉచితంగా క్లౌడ్‌లో బ్యాకప్ చేయడానికి ఒక చిన్న 30 సెకన్ల వీడియో చూడండి!</string>
+    <string name="backup_dialog_watch">వీడియో చూసి బ్యాకప్ చేయండి</string>
+    <string name="backup_success">డేటాబేస్ విజయవంతంగా క్లౌడ్‌లో బ్యాకప్ చేయబడింది!</string>
+    <string name="restore_btn_now">క్లౌడ్ బ్యాకప్ నుండి పునరుద్ధరించండి</string>
+    <string name="backup_btn_export_offline">ఫోన్‌కు బ్యాకప్ ఎక్స్‌పోర్ట్ చేయండి (ఆఫ్‌లైన్)</string>
+    <string name="restore_dialog_title">బోటిక్ డేటా పునరుద్ధరణ ☁️</string>
+    <string name="restore_dialog_desc">క్లౌడ్ నుండి మీ కస్టమర్ డైరెక్టరీ, కొలతలు మరియు ఆర్డర్లను ఉచితంగా పునరుద్ధరించడానికి ఒక చిన్న వీడియో ప్రకటనను చూడండి!</string>
+    <string name="restore_dialog_watch">వీడియో చూసి పునరుద్ధరించండి</string>
+    <string name="restore_dialog_skip">కొత్తగా ప్రారంభించండి / స్కిప్</string>
+    <string name="restore_success">బోటిక్ రికార్డులు విజయవంతంగా క్లౌడ్ నుండి పునరుద్ధరించబడ్డాయి!</string>
+    <string name="restore_required_title">డేటా పునరుద్ధరణ తప్పనిసరి ☁️</string>
+    <string name="restore_required_desc">క్లౌడ్‌లో మీ పాత బోటిక్ రికార్డులు కనుగొనబడ్డాయి! యాప్‌ను ఉపయోగించడానికి ముందు ఉచిత ప్లాన్ వినియోగదారులు వీడియో ప్రకటనను చూసి డేటాను పునరుద్ధరించుకోవాలి.</string>
+    <string name="restore_ad_not_completed">యాప్‌ను ఉపయోగించడానికి దయచేసి వీడియో ప్రకటనను పూర్తిగా చూడండి.</string>
+    <string name="restore_ad_loading">వీడియో ప్రకటన సిద్ధమవుతోంది. దయచేసి కొన్ని సెకన్ల తర్వాత మళ్లీ ప్రయత్నించండి.</string>
+    <string name="restore_in_progress">క్లౌడ్ నుండి రికార్డులు పునరుద్ధరించబడుతున్నాయి… దయచేసి వేచి ఉండండి.</string>
+    <string name="restore_btn_signout">లాగ్ అవుట్</string>
+
+    <!-- Template & Audio Rewarded Ads -->
+    <string name="template_unlock_title">కస్టమ్ టెంప్లేట్ అన్‌లాక్ చేయండి 📐</string>
+    <string name="template_unlock_desc">కస్టమ్ కొలతల టెంప్లేట్‌లను రూపొందించడం ప్రో ఫీచర్. ఉచితంగా టెంప్లేట్‌ను సృష్టించడానికి ఒక చిన్న వీడియో ప్రకటనను చూడండి లేదా అపరిమిత టెంప్లేట్‌ల కోసం ప్రోకి అప్‌గ్రేడ్ చేయండి!</string>
+    <string name="template_btn_watch">వీడియో చూసి టెంప్లేట్ సృష్టించండి</string>
+
+    <string name="audio_unlock_title">ఎక్స్‌టెండెడ్ వాయిస్ నోట్ (2 నిమిషాలు) 🎙️</string>
+    <string name="audio_unlock_desc">మీరు 30 సెకన్ల ఉచిత రికార్డింగ్ పరిమితిని చేరుకున్నారు! 2 నిమిషాల వరకు డిజైనర్ సూచనలను రికార్డ్ చేయడానికి ఒక చిన్న వీడియో చూడండి లేదా ప్రోకి అప్‌గ్రేడ్ చేయండి!</string>
+    <string name="audio_btn_watch">వీడియో చూసి 2 నిమిషాలు అన్‌లాక్ చేయండి</string>
+    <string name="audio_unlocked_success">2 నిమిషాల విస్తృత రికార్డింగ్ అన్‌లాక్ చేయబడింది!</string>
+
+    <!-- Legal, Privacy & Compliance -->
+    <string name="legal_privacy_title">చట్టపరమైన సమాచారం &amp; గోప్యత</string>
+    <string name="legal_privacy_policy_btn">గోప్యతా విధానం (Privacy Policy)</string>
+    <string name="legal_terms_btn">నిబంధనలు &amp; షరతులు (Terms of Service)</string>
+    <string name="legal_ad_privacy_btn">ప్రకటనల గోప్యత &amp; అనుమతులు</string>
+    <string name="legal_app_version">TailorBook v1.0.0 (ప్రొడక్షన్ వెర్షన్)</string>
+    <string name="legal_privacy_title_dialog">టైలర్‌బుక్ గోప్యతా విధానం</string>
+    <string name="legal_privacy_desc">టైలర్‌బుక్ ఆఫ్‌లైన్-ఫస్ట్ బోటిక్ యాప్. మీ కస్టమర్ల వివరాలు మరియు కొలతలు మీ డివైస్‌లో సురక్షితంగా నిల్వ ఉంటాయి. సుపాబేస్ ద్వారా క్లౌడ్ సింక్ ఎన్‌క్రిప్ట్ చేయబడింది. మేము మీ డేటాను ఇతరులకు విక్రయించము. గూగుల్ యాడ్‌మాబ్ ద్వారా ప్రకటనలు అందించబడతాయి.</string>
+    <string name="legal_privacy_online_btn">ఆన్‌లైన్‌లో చూడండి</string>
+    <string name="legal_privacy_online_url">https://tailorbook.app/privacy-policy.html</string>
+    <string name="legal_terms_title_dialog">నిబంధనలు &amp; షరతులు</string>
+    <string name="legal_terms_desc">టైలర్‌బుక్ టైలరింగ్ షాపుల కోసం డిజిటల్ నిర్వహణ సాధనాలను అందిస్తుంది. ఉచిత ఖాతా ప్రకటనలతో కూడి ఉంటుంది. ప్రో సబ్‌స్క్రిప్షన్ ద్వారా అపరిమిత కస్టమర్లు, ఆర్డర్లు మరియు క్లౌడ్ బ్యాకప్ లభిస్తాయి. సబ్‌స్క్రిప్షన్ చెల్లింపులు Google Play Billing ద్వారా సురక్షితంగా నిర్వహించబడతాయి.</string>
+
+    <!-- Help & Support -->
+    <string name="help_support_dialog_title">టైలర్‌బుక్ సహాయం &amp; మద్దతు</string>
+    <string name="help_support_dialog_desc">మీ బోటిక్ నిర్వహణ, ఆర్డర్లు లేదా కొలతలకు సంబంధించి సహాయం కావాలా?</string>
+    <string name="help_support_btn_whatsapp">వాట్సాప్‌లో సంప్రదించండి (+91 Support)</string>
+    <string name="help_support_btn_guide">యాప్ యూజర్ గైడ్ &amp; టూర్</string>
+    <string name="help_support_btn_close">మూసివేయి</string>
+
+    <!-- Device Duplicate Prevention -->
+    <string name="duplicate_device_title">పరికరం ఇప్పటికే నమోదు చేయబడింది 📱</string>
+    <string name="duplicate_device_desc">ఈ పరికరం ఇప్పటికే ఒక ఖాతాకు (%s) లింక్ చేయబడింది. ఒకే పరికరంలో బహుళ షాప్ ఖాతాలు అనుమతించబడవు.\n\nదయచేసి మీ రిజిస్టర్డ్ ఖాతాతో లాగిన్ అవ్వండి.</string>
+    <string name="duplicate_device_btn_login">లాగిన్‌కి వెళ్లండి</string>
+</resources>

@@ -1,0 +1,480 @@
+<resources>
+    <!-- App Details -->
+    <string name="app_name">TailorBook</string>
+    <string name="app_tagline">Smart Business Management for Tailors &amp; Boutiques</string>
+
+    <!-- Common Actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_search">Search</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_close">Close</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_next">Next</string>
+    <string name="action_back">Back</string>
+    <string name="action_done">Done</string>
+    <string name="action_call">Call</string>
+    <string name="action_whatsapp">WhatsApp</string>
+    <string name="action_share">Share</string>
+    <string name="cd_navigation_menu">Open navigation menu</string>
+
+    <!-- Navigation Drawer -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_customers">Customers</string>
+    <string name="nav_measurements">Measurements</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_delivery_calendar">Delivery Calendar</string>
+    <string name="nav_payments">Payments</string>
+    <string name="nav_design_gallery">Design Gallery</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_staff_management">Staff Management</string>
+    <string name="nav_subscription">Subscription &amp; Premium</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_help_support">Help &amp; Support</string>
+
+    <!-- Screen States -->
+    <string name="state_loading">Loading...</string>
+    <string name="state_empty_customers">No customers found</string>
+    <string name="state_empty_orders">No orders found</string>
+    <string name="state_error_generic">Something went wrong. Please try again.</string>
+    <string name="state_offline_banner">Working Offline — Changes will sync when online</string>
+    <string name="state_syncing">Syncing with cloud...</string>
+    <string name="state_synced">All data backed up</string>
+
+    <!-- Order Statuses -->
+    <string name="status_new">New</string>
+    <string name="status_cutting">Cutting</string>
+    <string name="status_stitching">Stitching</string>
+    <string name="status_finishing">Finishing</string>
+    <string name="status_ready">Ready for Delivery</string>
+    <string name="status_delivered">Delivered</string>
+    <string name="status_cancelled">Cancelled</string>
+
+    <!-- Garment Templates -->
+    <string name="garment_blouse">Blouse</string>
+    <string name="garment_shirt">Shirt</string>
+    <string name="garment_tshirt">T-Shirt</string>
+    <string name="garment_pants">Pants / Trousers</string>
+    <string name="garment_kurti">Kurti / Kameez</string>
+    <string name="garment_dress">Dress / Frock</string>
+    <string name="garment_churidar">Churidar / Salwar</string>
+    <string name="garment_custom">Custom Garment</string>
+
+    <!-- Language Names -->
+    <string name="language_english">English</string>
+    <string name="language_telugu">తెలుగు (Telugu)</string>
+
+    <!-- Onboarding Carousel -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_get_started">Get Started</string>
+    <string name="onboarding_title_1">Manage Customers &amp; Families</string>
+    <string name="onboarding_desc_1">Keep customer contact details, family members, and order histories together in one place.</string>
+    <string name="onboarding_title_2">Never Lose a Measurement</string>
+    <string name="onboarding_desc_2">Versioned garment measurements for blouses, dresses, kurties, and suits. Historical orders are safely protected.</string>
+    <string name="onboarding_title_3">Track Orders &amp; Delivery</string>
+    <string name="onboarding_desc_3">Know exact stitching stages from cutting to delivery. Keep customers happy with on-time notifications.</string>
+    <string name="onboarding_title_4">100% Offline-First &amp; Cloud Backup</string>
+    <string name="onboarding_desc_4">Runs reliably without internet in your boutique and syncs seamlessly whenever you connect.</string>
+    <!-- Language Selection Screen -->
+    <string name="lang_select_title">Choose Your Language</string>
+    <string name="lang_select_subtitle">Select the language you are most comfortable with. You can change this anytime in Settings.</string>
+    <string name="lang_english_title">English</string>
+    <string name="lang_english_desc">Use TailorBook in English</string>
+    <string name="lang_telugu_title">తెలుగు (Telugu)</string>
+    <string name="lang_telugu_desc">టైలర్‌బుక్‌ను తెలుగులో ఉపయోగించండి</string>
+    <string name="action_continue">Continue</string>
+    <!-- Shop Registration Screen -->
+    <string name="shop_reg_title">Register Your Shop</string>
+    <string name="shop_reg_subtitle">Set up your tailoring business profile to get started.</string>
+    <string name="shop_reg_field_shop_name">Shop / Boutique Name</string>
+    <string name="shop_reg_field_shop_name_hint">e.g. Sri Lakshmi Boutiques</string>
+    <string name="shop_reg_field_owner_name">Owner / Master Tailor Name</string>
+    <string name="shop_reg_field_owner_name_hint">e.g. Ramesh Kumar</string>
+    <string name="shop_reg_field_phone">Mobile Number</string>
+    <string name="shop_reg_field_phone_hint">10-digit mobile number</string>
+    <string name="shop_reg_field_business_type">Primary Business Type</string>
+    <string name="shop_reg_type_women">Women\'s Boutique &amp; Blouses</string>
+    <string name="shop_reg_type_men">Men\'s Tailoring &amp; Suits</string>
+    <string name="shop_reg_type_family">Unisex &amp; Family Tailoring</string>
+    <string name="shop_reg_type_designer">Designer &amp; Bridal Studio</string>
+    <string name="shop_reg_btn_submit">Create Shop Profile</string>
+    <string name="shop_reg_error_shop_name">Please enter a valid shop name (min 3 characters)</string>
+    <string name="shop_reg_error_owner_name">Please enter owner name</string>
+    <string name="shop_reg_error_phone">Please enter a valid 10-digit mobile number</string>
+    <!-- Login & OTP Screen -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to your TailorBook business account</string>
+    <string name="login_field_phone">Registered Mobile Number</string>
+    <string name="login_field_phone_hint">Enter 10-digit mobile number</string>
+    <string name="login_btn_send_otp">Get OTP</string>
+    <string name="login_link_new_user">New to TailorBook? Register Shop</string>
+    <string name="login_link_existing_user">Already have an account? Sign In</string>
+    <string name="otp_title">Verify Mobile Number</string>
+    <string name="otp_subtitle">Enter the 6-digit OTP sent to +91 %1$s</string>
+    <string name="otp_field_label">Enter 6-digit OTP</string>
+    <string name="otp_btn_verify">Verify &amp; Sign In</string>
+    <string name="otp_resend">Resend OTP</string>
+    <string name="otp_resend_timer">Resend OTP in %1$ds</string>
+    <string name="otp_change_number">Change Number</string>
+    <string name="otp_error_invalid">Please enter a valid 6-digit OTP</string>
+    <!-- Shop Profile & Settings Screen -->
+    <string name="shop_profile_title">Shop Settings &amp; Schedule</string>
+    <string name="shop_profile_subtitle">Configure your boutique working hours, default unit and delivery schedule</string>
+    <string name="shop_profile_section_hours">Working Hours &amp; Schedule</string>
+    <string name="shop_profile_field_opening">Opening Time</string>
+    <string name="shop_profile_field_closing">Closing Time</string>
+    <string name="shop_profile_field_weekly_off">Weekly Off Day</string>
+    <string name="shop_profile_day_sunday">Sunday</string>
+    <string name="shop_profile_day_monday">Monday</string>
+    <string name="shop_profile_day_tuesday">Tuesday</string>
+    <string name="shop_profile_day_wednesday">Wednesday</string>
+    <string name="shop_profile_day_thursday">Thursday</string>
+    <string name="shop_profile_day_friday">Friday</string>
+    <string name="shop_profile_day_saturday">Saturday</string>
+    <string name="shop_profile_day_none">None (7 Days Open)</string>
+    <string name="shop_profile_section_preferences">Preferences &amp; Units</string>
+    <string name="shop_profile_field_unit">Default Measurement Unit</string>
+    <string name="shop_profile_unit_inch">Inches (in)</string>
+    <string name="shop_profile_unit_cm">Centimeters (cm)</string>
+    <string name="shop_profile_field_currency">Currency Symbol</string>
+    <string name="shop_profile_field_lead_days">Standard Delivery Lead Time (Days)</string>
+    <string name="shop_profile_section_additional">Address &amp; Tax (Optional)</string>
+    <string name="shop_profile_field_address">Shop Address / Landmark</string>
+    <string name="shop_profile_field_address_hint">e.g., Shop #4, Market Road, Near Clock Tower</string>
+    <string name="shop_profile_field_gstin">GSTIN / Tax ID</string>
+    <string name="shop_profile_field_gstin_hint">e.g., 36AAAAA0000A1Z5</string>
+    <string name="shop_profile_btn_save">Save &amp; Continue to Dashboard</string>
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_metric_active_orders">Active Orders</string>
+    <string name="dashboard_metric_due_today">Due Today</string>
+    <string name="dashboard_metric_overdue">Overdue</string>
+    <string name="dashboard_metric_ready">Ready</string>
+    <string name="dashboard_metric_pending_balance">Pending Balance</string>
+    <string name="dashboard_quick_actions">Quick Actions</string>
+    <string name="dashboard_action_new_order">New Order</string>
+    <string name="dashboard_action_new_customer">New Customer</string>
+    <string name="dashboard_action_new_measure">New Measure</string>
+    <string name="dashboard_action_record_payment">Record Payment</string>
+    <string name="dashboard_deliveries_title">Today\'s Deliveries</string>
+    <string name="dashboard_deliveries_empty">No deliveries scheduled for today</string>
+    <string name="dashboard_call_action">Call</string>
+    <string name="dashboard_whatsapp_action">WhatsApp</string>
+    <!-- Order Statuses -->
+    <string name="order_status_new">New</string>
+    <string name="order_status_cutting">Cutting</string>
+    <string name="order_status_stitching">Stitching</string>
+    <string name="order_status_finishing">Finishing</string>
+    <string name="order_status_ready">Ready</string>
+    <string name="order_status_delivered">Delivered</string>
+    <string name="order_status_cancelled">Cancelled</string>
+    <!-- Customers Module -->
+    <string name="customers_title">Customers</string>
+    <string name="customers_search_hint">Search by name or phone...</string>
+    <string name="customers_empty_title">No Customers Yet</string>
+    <string name="customers_empty_desc">Tap + to add your first boutique client and measurements</string>
+    <string name="customers_btn_add">Add Customer</string>
+    <string name="customers_family_count">%1$d Family</string>
+    <string name="customers_add_title">New Customer</string>
+    <string name="customers_add_subtitle">Enter customer contact details</string>
+    <string name="customers_field_name">Customer Full Name</string>
+    <string name="customers_field_phone">Primary Mobile Number</string>
+    <string name="customers_field_alt_phone">Secondary Phone (Optional)</string>
+    <string name="customers_field_gender">Gender</string>
+    <string name="customers_gender_female">Female</string>
+    <string name="customers_gender_male">Male</string>
+    <string name="customers_gender_other">Other</string>
+    <string name="customers_field_address">Address / Area</string>
+    <string name="customers_field_notes">Notes / Preferences</string>
+    <string name="customers_btn_save">Save Customer Profile</string>
+    <string name="customers_error_name">Please enter customer name (min 2 characters)</string>
+    <string name="customers_error_phone">Please enter a valid 10-digit mobile number</string>
+    <!-- Customer Profile & Family Management -->
+    <string name="customer_profile_title">Customer Profile</string>
+    <string name="customer_profile_edit">Edit Profile</string>
+    <string name="customer_profile_orders_count">Total Orders</string>
+    <string name="customer_profile_lifetime_value">Lifetime Value</string>
+    <string name="customer_profile_pending_balance">Pending Balance</string>
+    <string name="customer_profile_family_title">Family Members</string>
+    <string name="customer_profile_add_family">+ Add Family Member</string>
+    <string name="customer_profile_no_family">No family members linked yet</string>
+    <string name="customer_profile_measurements_title">Measurements</string>
+    <string name="customer_profile_action_new_measure">+ New Measurement</string>
+    <string name="customer_profile_action_new_order">+ New Order</string>
+    <string name="customer_profile_delete_btn">Archive Customer</string>
+    <string name="customer_profile_delete_dialog_title">Archive Customer?</string>
+    <string name="customer_profile_delete_dialog_msg">This customer will be hidden from the active list. All past order records and measurements remain safely stored.</string>
+    <string name="family_member_add_title">Add Family Member</string>
+    <string name="family_member_name_hint">Member Name (e.g., Saanvi)</string>
+    <string name="family_member_relation_hint">Relationship (e.g., Daughter, Wife, Mother)</string>
+    <string name="family_member_btn_save">Add Member</string>
+    <string name="family_member_limit_reached_title">Family Member Limit Reached (5/5)</string>
+    <string name="family_member_limit_reached_desc">You have reached the maximum allowed limit of 5 family members for this customer.</string>
+    <string name="family_member_watch_ad_title">Unlock Family Member Slot</string>
+    <string name="family_member_watch_ad_desc">Watch a short video ad to add a family member for this customer (up to 5 members allowed).</string>
+    <string name="family_member_watch_ad_btn">Watch Video Ad</string>
+    <string name="customer_edit_title">Edit Customer</string>
+    <string name="customer_edit_btn_save">Update Customer</string>
+
+    <!-- Phase 06: Measurements Engine & Garment Templates -->
+    <string name="measurement_templates_title">Select Garment Template</string>
+    <string name="measurement_templates_subtitle">Choose garment type to record or view measurements</string>
+    <string name="measurement_entry_title">Record Measurements</string>
+    <string name="measurement_history_title">Measurement History</string>
+    <string name="measurement_compare_title">Compare Versions</string>
+    <string name="measurement_version_badge">Version %1$d</string>
+    <string name="measurement_save_btn">Save Measurement Version</string>
+    <string name="measurement_field_notes">Fitting &amp; Stitching Notes (Optional)</string>
+    <string name="measurement_no_records">No measurements saved for this garment yet.</string>
+    <string name="measurement_take_new">+ Record New Version</string>
+    <string name="measurement_diff_heading">Version Changes</string>
+    <string name="measurement_diff_unchanged">Unchanged</string>
+
+    <!-- Phase 07: Gallery & Camera Module -->
+    <string name="gallery_title">Design Gallery</string>
+    <string name="gallery_subtitle">Boutique catalog &amp; client references</string>
+    <string name="gallery_add_photo">Add Photo</string>
+    <string name="gallery_camera">Take Photo</string>
+    <string name="gallery_pick">Choose from Gallery</string>
+    <string name="gallery_tag_all">All</string>
+    <string name="gallery_tag_neck">Neck Design</string>
+    <string name="gallery_tag_sleeve">Sleeves</string>
+    <string name="gallery_tag_embroidery">Embroidery</string>
+    <string name="gallery_tag_maggam">Maggam Work</string>
+    <string name="gallery_tag_border">Border / Lace</string>
+    <string name="gallery_tag_blouse">Blouse</string>
+    <string name="gallery_tag_kurti">Kurti</string>
+    <string name="gallery_tag_lehenga">Lehenga</string>
+    <string name="gallery_no_photos">No design photos yet</string>
+    <string name="gallery_no_photos_desc">Capture neck patterns, sleeve styles, and embroidery work to showcase to clients.</string>
+    <string name="photo_details_title">Photo Details</string>
+    <string name="photo_notes_hint">Notes &amp; style instructions...</string>
+    <string name="photo_tags_label">Tags</string>
+    <string name="photo_link_customer">Linked Customer</string>
+    <string name="photo_delete">Delete Photo</string>
+    <string name="photo_save">Save Changes</string>
+    <string name="photo_delete_confirm">Are you sure you want to delete this design photo?</string>
+
+    <!-- Phase 08: Order Management -->
+    <string name="orders_title">Orders</string>
+    <string name="orders_tab_all">All</string>
+    <string name="orders_tab_new">New</string>
+    <string name="orders_tab_in_progress">In Progress</string>
+    <string name="orders_tab_ready">Ready</string>
+    <string name="orders_tab_delivered">Delivered</string>
+    <string name="order_create_title">New Order</string>
+    <string name="order_create_subtitle">Book order with frozen measurement snapshot</string>
+    <string name="order_details_title">Order Details</string>
+    <string name="order_status_update">Update Status</string>
+    <string name="order_cancel">Cancel Order</string>
+    <string name="order_stitching_instructions">Stitching Instructions</string>
+    <string name="order_fabric_details">Fabric &amp; Material Details</string>
+    <string name="order_delivery_date">Promised Delivery Date</string>
+    <string name="order_total_price">Total Amount</string>
+    <string name="order_advance_paid">Advance Paid</string>
+    <string name="order_balance_due">Balance Due</string>
+    <string name="order_no_orders">No orders found</string>
+    <string name="order_no_orders_desc">Book client orders to track stitching progress and delivery schedules.</string>
+
+    <!-- Phase 09: Delivery Calendar -->
+    <string name="calendar_title">Delivery Calendar</string>
+    <string name="calendar_subtitle">Daily &amp; monthly delivery schedules</string>
+    <string name="calendar_today">Today</string>
+    <string name="calendar_reschedule">Reschedule</string>
+    <string name="calendar_reschedule_title">Reschedule Delivery</string>
+    <string name="calendar_reschedule_subtitle">Update promised delivery date for this order</string>
+    <string name="calendar_reschedule_reason">Reason for Reschedule (Optional)</string>
+    <string name="calendar_filter_all">All</string>
+    <string name="calendar_filter_due">Pending</string>
+    <string name="calendar_filter_overdue">Overdue</string>
+    <string name="calendar_filter_delivered">Delivered</string>
+    <string name="calendar_no_deliveries">No deliveries on this day</string>
+    <string name="calendar_no_deliveries_desc">Select another date or book a new order with this delivery date.</string>
+    <string name="calendar_confirm_reschedule">Confirm Reschedule</string>
+    <string name="calendar_quick_days_1">+1 Day</string>
+    <string name="calendar_quick_days_2">+2 Days</string>
+    <string name="calendar_quick_days_3">+3 Days</string>
+    <string name="calendar_quick_days_7">+1 Week</string>
+
+    <!-- Phase 10: Payments & Balances -->
+    <string name="payments_title">Payments &amp; Balances</string>
+    <string name="payments_subtitle">Financial ledger, receipts &amp; dues</string>
+    <string name="payments_record_title">Record Payment</string>
+    <string name="payments_record_subtitle">Receive advance or final balance from client</string>
+    <string name="payments_total_outstanding">Total Outstanding</string>
+    <string name="payments_total_collected">Total Collected</string>
+    <string name="payments_method_cash">Cash</string>
+    <string name="payments_method_upi">UPI</string>
+    <string name="payments_method_bank">Bank</string>
+    <string name="payments_method_cheque">Cheque</string>
+    <string name="payments_method_other">Other</string>
+    <string name="payments_amount">Payment Amount (₹)</string>
+    <string name="payments_ref_number">Transaction / Ref # (Optional)</string>
+    <string name="payments_notes">Receipt Note (Optional)</string>
+    <string name="payments_share_receipt">Share Receipt</string>
+    <string name="payments_full_balance">Full Balance</string>
+    <string name="payments_receipt_title">Payment Receipt</string>
+    <string name="payments_outstanding_list">Pending Balances by Customer</string>
+    <string name="payments_recent_transactions">Payment History</string>
+    <string name="payments_send_reminder">Send WhatsApp Reminder</string>
+    <string name="payments_no_dues">All cleared! No outstanding balances.</string>
+    <string name="payments_no_transactions">No payments recorded yet.</string>
+
+    <!-- Phase 11: Analytics, Reports & Notifications -->
+    <string name="reports_title">Reports &amp; Analytics</string>
+    <string name="reports_subtitle">Business intelligence &amp; financial trends</string>
+    <string name="reports_range_today">Today</string>
+    <string name="reports_range_week">This Week</string>
+    <string name="reports_range_month">This Month</string>
+    <string name="reports_range_year">This Year</string>
+    <string name="reports_booked_value">Booked Value</string>
+    <string name="reports_collected_cash">Cash Collected</string>
+    <string name="reports_punctuality">On-Time Delivery</string>
+    <string name="reports_orders_breakdown">Orders Breakdown</string>
+    <string name="reports_popular_garments">Popular Garments</string>
+    <string name="reports_share_summary">Share Summary</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_subtitle">Delivery alerts, dues &amp; reminders</string>
+    <string name="notifications_empty">All clear! No alerts</string>
+    <string name="notifications_empty_desc">You will receive delivery due alerts and payment reminders here.</string>
+    <string name="notifications_mark_all_read">Clear All</string>
+    <string name="notifications_type_due_today">Delivery Due Today</string>
+    <string name="notifications_type_due_tomorrow">Delivery Due Tomorrow</string>
+    <string name="notifications_type_overdue">Delivery Overdue!</string>
+    <string name="notifications_type_balance">Payment Due Reminder</string>
+
+    <!-- Phase 12: Staff Management -->
+    <string name="staff_title">Staff Management</string>
+    <string name="staff_subtitle">Team members, roles &amp; permissions</string>
+    <string name="staff_add">Add Staff Member</string>
+    <string name="staff_empty">No staff members added yet</string>
+    <string name="staff_empty_desc">Add tailors, cutters, and shop managers to assign work and track tasks.</string>
+    <string name="staff_role_owner">Owner</string>
+    <string name="staff_role_manager">Manager</string>
+    <string name="staff_role_tailor">Master Tailor</string>
+    <string name="staff_role_worker">Assistant / Cutter</string>
+    <string name="staff_active">Active</string>
+    <string name="staff_inactive">Inactive</string>
+    <string name="staff_name_hint">Staff Full Name</string>
+    <string name="staff_phone_hint">Mobile Number</string>
+    <string name="staff_save_btn">Save Staff Member</string>
+    <string name="staff_toggle_status">Toggle Access</string>
+
+    <!-- Phase 13: Subscription & Monetization -->
+    <string name="subscription_title">Subscription &amp; Plans</string>
+    <string name="subscription_subtitle">Pro Boutique &amp; Ad-Free Experience</string>
+    <string name="subscription_choose_plan">Choose a Subscription Plan</string>
+    <string name="subscription_upgrade_cta">Upgrade to Pro Boutique (%1$s%2$s)</string>
+    <string name="subscription_restore_btn">Restore Previous Purchases</string>
+    <string name="subscription_cancel_btn">Cancel Subscription / Downgrade to Free</string>
+    <string name="subscription_comparison_title">Plan Benefits &amp; Features</string>
+    <string name="subscription_success_title">Pro Boutique Activated! 👑</string>
+    <string name="subscription_start_using">Start Using Pro Features</string>
+    <string name="subscription_cancel_confirm_title">Confirm Downgrade to Free Tier</string>
+    <string name="subscription_cancel_confirm_desc">Are you sure you want to cancel your Pro Boutique subscription? You will return to the free ad-supported tier. Your offline customer data remains 100% safe.</string>
+    <string name="subscription_confirm_downgrade">Yes, Downgrade to Free</string>
+
+    <!-- Authentication & Email Login -->
+    <string name="auth_tab_email">Email Login</string>
+    <string name="auth_tab_phone">Phone OTP</string>
+    <string name="auth_phone_unavailable_notice">Phone verification is not available yet. Please use email login for now.</string>
+    <string name="auth_label_email">Email Address</string>
+    <string name="auth_label_password">Password</string>
+    <string name="auth_label_confirm_password">Confirm Password</string>
+    <string name="auth_btn_login">Sign In</string>
+    <string name="auth_btn_register">Register New Boutique</string>
+    <string name="auth_link_forgot_password">Forgot Password?</string>
+    <string name="auth_link_need_account">Don\'t have an account? Register Shop</string>
+    <string name="auth_link_already_have_account">Already have an account? Sign In</string>
+    <string name="auth_forgot_title">Reset Password</string>
+    <string name="auth_forgot_desc">Enter your email to receive a 6-digit verification code.</string>
+    <string name="auth_forgot_btn_send_otp">Send 6-Digit Code</string>
+    <string name="auth_label_otp">6-Digit Code</string>
+    <string name="auth_label_new_password">New Password</string>
+    <string name="auth_btn_reset_password">Reset Password</string>
+
+    <!-- Monetization & Entitlement Dialogs -->
+    <string name="entitlement_unlock_title">Your Business Is Growing! ✂️</string>
+    <string name="entitlement_unlock_desc">You have used your 10 free customer slots. Watch a short video advertisement to unlock your next customer. You can add up to 20 customers using our free ad-supported option.</string>
+    <string name="entitlement_btn_watch_ad">Watch Video &amp; Add Customer</string>
+    <string name="entitlement_btn_upgrade">Upgrade to Premium</string>
+    <string name="entitlement_btn_not_now">Not Now</string>
+    <string name="entitlement_limit_reached_title">Customer Limit Reached (20/20) 👑</string>
+    <string name="entitlement_limit_reached_desc">You have reached the maximum limit of 20 customers on the free ad-supported tier. Upgrade to TailorBook Premium for unlimited customers, completely ad-free experience, and advanced cloud backups.</string>
+    <string name="entitlement_btn_maybe_later">Maybe Later</string>
+    <string name="ad_loading">Loading video advertisement, please wait…</string>
+    <string name="ad_failed_load">Video advertisement is unavailable. Please check your internet connection or upgrade to Premium.</string>
+    <string name="ad_skipped">The video was closed before completion. Please watch the full video to unlock your next customer.</string>
+    <string name="ad_reward_verified">Reward verified! Customer slot unlocked.</string>
+
+    <!-- Operational Limits & Gating -->
+    <string name="entitlement_active_order_limit_title">Active Order Limit Reached (15/15) 📋</string>
+    <string name="entitlement_active_order_limit_desc">You have 15 active orders in progress! Deliver or complete pending orders, or upgrade to TailorBook Pro for unlimited concurrent orders.</string>
+    <string name="entitlement_staff_limit_title">Staff Limit Reached (1/1) ✂️</string>
+    <string name="entitlement_staff_limit_desc">Free tier allows 1 staff member (e.g. 1 Cutting Master). Upgrade to TailorBook Pro to manage unlimited Cutting Masters, Tailors, and track piece-rate payouts!</string>
+    <string name="entitlement_photo_limit_title">Photo Limit Reached (1/1) 📷</string>
+    <string name="entitlement_photo_limit_desc">Free tier allows 1 design reference photo per order. Upgrade to TailorBook Pro to attach up to 5 multi-angle reference photos with cloud backup!</string>
+    <string name="entitlement_reports_export_title">Pro Business Export 👑</string>
+    <string name="entitlement_reports_export_desc">Exporting full GST ledgers, order accounts, and customer lists to Excel/PDF is a TailorBook Pro feature. Upgrade now to unlock!</string>
+
+    <!-- Cloud Backup via Rewarded Ad -->
+    <string name="backup_cloud_title">Cloud Backup &amp; Data Protection</string>
+    <string name="backup_pro_status">Real-Time Supabase Cloud Backup (Active)</string>
+    <string name="backup_free_status">Local Device Storage (Manual Ad-Supported Backup)</string>
+    <string name="backup_btn_now">Back Up Database Now</string>
+    <string name="backup_dialog_title">Back Up Shop Database ☁️</string>
+    <string name="backup_dialog_desc">Watch a short 30-second video advertisement to safely back up your entire customer directory, measurements, and orders to the secure cloud for free!</string>
+    <string name="backup_dialog_watch">Watch Video &amp; Back Up</string>
+    <string name="backup_success">Database successfully backed up to cloud!</string>
+    <string name="restore_btn_now">Restore from Cloud Backup</string>
+    <string name="backup_btn_export_offline">Export Backup to Phone (Offline)</string>
+    <string name="restore_dialog_title">Restore Boutique Data ☁️</string>
+    <string name="restore_dialog_desc">Watch a short video advertisement to safely restore your customer directory, measurements, and orders from the cloud for free!</string>
+    <string name="restore_dialog_watch">Watch Video &amp; Restore</string>
+    <string name="restore_dialog_skip">Start Fresh / Skip</string>
+    <string name="restore_success">Boutique records successfully restored from cloud!</string>
+    <string name="restore_required_title">Restore Required to Continue ☁️</string>
+    <string name="restore_required_desc">Existing boutique records were found in the cloud! To protect your shop data on this fresh install, free tier users must watch a short video advertisement to restore their customer database, measurements, and orders before using the app.</string>
+    <string name="restore_ad_not_completed">Please complete the video advertisement to restore your boutique records and access the app.</string>
+    <string name="restore_ad_loading">Video advertisement is still preparing. Please try again in a few seconds.</string>
+    <string name="restore_in_progress">Restoring boutique records from cloud… Please wait.</string>
+    <string name="restore_btn_signout">Log Out</string>
+
+    <!-- Template & Audio Rewarded Ads -->
+    <string name="template_unlock_title">Unlock Custom Template 📐</string>
+    <string name="template_unlock_desc">Creating custom garment templates is a Pro feature. Watch a short video advertisement to create and save this custom template for free, or upgrade to TailorBook Pro for unlimited templates!</string>
+    <string name="template_btn_watch">Watch Video &amp; Create Template</string>
+
+    <string name="audio_unlock_title">Extended Voice Note (2 Mins) 🎙️</string>
+    <string name="audio_unlock_desc">You reached the 30-second free recording limit! Watch a short video to unlock up to 2 minutes of detailed bridal/designer audio instructions, or upgrade to Pro!</string>
+    <string name="audio_btn_watch">Watch Video &amp; Unlock 2 Mins</string>
+    <string name="audio_unlocked_success">Extended 2-minute recording unlocked!</string>
+
+    <!-- Legal, Privacy & Compliance -->
+    <string name="legal_privacy_title">Legal, Privacy &amp; Compliance</string>
+    <string name="legal_privacy_policy_btn">Privacy Policy</string>
+    <string name="legal_terms_btn">Terms of Service</string>
+    <string name="legal_ad_privacy_btn">Ad Privacy &amp; Consent Choices</string>
+    <string name="legal_app_version">TailorBook v1.0.0 (Production Release)</string>
+    <string name="legal_privacy_title_dialog">TailorBook Privacy Policy</string>
+    <string name="legal_privacy_desc">TailorBook is an offline-first boutique management app. Your customers\' phone numbers, addresses, and measurement profiles are stored locally on your device in secure sandbox storage. Cloud sync and backups are encrypted via Supabase. We do not sell your customer data to third parties. Advertisements are served via Google AdMob adhering to Google Play Families and Privacy Policies.</string>
+    <string name="legal_privacy_online_btn">View Online</string>
+    <string name="legal_privacy_online_url">https://tailorbook.app/privacy-policy.html</string>
+    <string name="legal_terms_title_dialog">Terms of Service</string>
+    <string name="legal_terms_desc">TailorBook provides digital management tools for tailoring boutiques. Free accounts are ad-supported with standard operational limits. Pro Boutique subscriptions provide white-label receipts, unlimited customers, unlimited active orders, and multi-device cloud sync. All subscription payments and cancellations are handled securely via Google Play Billing.</string>
+
+    <!-- Help & Support -->
+    <string name="help_support_dialog_title">TailorBook Help &amp; Support</string>
+    <string name="help_support_dialog_desc">Need assistance with your boutique setup, orders, or measurements?</string>
+    <string name="help_support_btn_whatsapp">Chat on WhatsApp (+91 Support)</string>
+    <string name="help_support_btn_guide">User Guide &amp; App Tour</string>
+    <string name="help_support_btn_close">Close</string>
+
+    <!-- Device Duplicate Prevention -->
+    <string name="duplicate_device_title">Device Already Registered 📱</string>
+    <string name="duplicate_device_desc">This device is already linked to an existing account (%s). To prevent duplicate accounts, only one account is permitted per device.\n\nPlease log in with your registered account.</string>
+    <string name="duplicate_device_btn_login">Go to Login</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <!-- TailorBook Premium Boutique Color Palette -->
+    <color name="warm_ivory">#F8F5EF</color>
+    <color name="deep_teal">#203B36</color>
+    <color name="muted_sage">#84978A</color>
+    <color name="soft_gold">#B58A5A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="charcoal">#263238</color>
+    <color name="light_beige">#E7E2D9</color>
+    <color name="status_red">#C62828</color>
+    <color name="status_green">#2E7D32</color>
+</resources>

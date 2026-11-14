@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Downloadable font descriptor for Noto Sans Telugu.
+    Uses Google Fonts provider (com.google.android.gms.fonts) for on-device caching.
+    Falls back gracefully if Play Services are unavailable (offline / older device).
+    The font handles Telugu diacritics (matras) correctly with a generous lineHeight
+    in Type.kt to prevent clipping of characters like కొ, కు, కా, etc.
+-->
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:fontProviderAuthority="com.google.android.gms.fonts"
+    app:fontProviderPackage="com.google.android.gms"
+    app:fontProviderQuery="Noto Sans Telugu"
+    app:fontProviderCerts="@array/com_google_android_gms_fonts_certs">
+</font-family>
