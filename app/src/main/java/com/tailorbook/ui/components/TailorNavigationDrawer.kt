@@ -22,6 +22,7 @@ import androidx.compose.material.icons.automirrored.filled.Help
 import androidx.compose.material.icons.automirrored.outlined.Help
 import androidx.compose.material.icons.filled.Analytics
 import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.Checkroom
 import androidx.compose.material.icons.filled.ContentCut
 import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.Groups
@@ -34,6 +35,7 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Straighten
 import androidx.compose.material.icons.outlined.Analytics
 import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.Checkroom
 import androidx.compose.material.icons.outlined.ContentCut
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Groups
@@ -126,6 +128,11 @@ enum class DrawerDestination(
         R.string.nav_customers,
         Icons.Filled.People,
         Icons.Outlined.People
+    ),
+    GarmentTemplates(
+        R.string.nav_garment_templates,
+        Icons.Filled.Checkroom,
+        Icons.Outlined.Checkroom
     ),
     Measurements(
         R.string.nav_measurements,
@@ -262,6 +269,7 @@ fun TailorDrawerSheet(
             DrawerSectionLabel("Business")
             DrawerNavItem(DrawerDestination.Dashboard, selectedDestination, onDestinationSelected)
             DrawerNavItem(DrawerDestination.Customers, selectedDestination, onDestinationSelected)
+            DrawerNavItem(DrawerDestination.GarmentTemplates, selectedDestination, onDestinationSelected)
             DrawerNavItem(DrawerDestination.Measurements, selectedDestination, onDestinationSelected)
             DrawerNavItem(DrawerDestination.Orders, selectedDestination, onDestinationSelected)
             DrawerNavItem(DrawerDestination.DeliveryCalendar, selectedDestination, onDestinationSelected)

@@ -26,13 +26,14 @@ import org.junit.Test
 class DesignSystemSanityTest {
 
     @Test
-    fun testDrawerDestinations_exactThirteenDestinations() {
+    fun testDrawerDestinations_exactFourteenDestinations() {
         val destinations = DrawerDestination.values()
-        assertEquals("Drawer must contain exactly 13 navigation destinations", 13, destinations.size)
+        assertEquals("Drawer must contain exactly 14 navigation destinations", 14, destinations.size)
 
         val expectedOrder = listOf(
             DrawerDestination.Dashboard,
             DrawerDestination.Customers,
+            DrawerDestination.GarmentTemplates,
             DrawerDestination.Measurements,
             DrawerDestination.Orders,
             DrawerDestination.DeliveryCalendar,

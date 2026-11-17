@@ -168,7 +168,8 @@ class MeasurementRepositoryImpl(
                     customNameEn = entity.nameEn,
                     customNameTe = entity.nameTe,
                     fields = fields,
-                    isCustom = true
+                    isCustom = true,
+                    defaultPrice = entity.defaultPrice
                 )
             }
             // Register dynamic templates so GarmentTemplates.ALL_TEMPLATES reflects them globally
@@ -186,7 +187,8 @@ class MeasurementRepositoryImpl(
                 nameTe = template.customNameTe,
                 category = template.category.name,
                 defaultFieldsJson = fieldsJson,
-                isCustom = true
+                isCustom = true,
+                defaultPrice = template.defaultPrice
             )
             measurementTemplateDao?.insertTemplate(entity)
             enqueueTemplateSync(entity, template.fields)

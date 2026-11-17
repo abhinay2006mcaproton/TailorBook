@@ -54,6 +54,7 @@ import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PhotoLibrary
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.QrCode
 import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -105,6 +106,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.tailorbook.R
 import com.tailorbook.core.ads.RewardedAdManager
+import com.tailorbook.core.datastore.UserPreferencesManager
+import com.tailorbook.core.util.UpiPaymentQrDialog
 import com.tailorbook.core.util.VoiceNoteHelper
 import com.tailorbook.feature.customers.presentation.CustomerViewModel
 import com.tailorbook.feature.gallery.presentation.GalleryViewModel
@@ -163,10 +166,18 @@ fun OrderCreationWizardScreen(
     isPremium: Boolean = false,
     rewardedAdManager: RewardedAdManager? = null,
     onNavigateToUpgrade: () -> Unit = {},
+    shopName: String = "",
+    shopUpiId: String = "",
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
     val haptic = LocalHapticFeedback.current
+    val prefs = remember { UserPreferencesManager(context) }
+    val savedShopName by prefs.shopNameFlow.collectAsState(initial = "My Boutique")
+    val savedShopUpiId by prefs.shopUpiIdFlow.collectAsState(initial = "")
+    val effectiveShopName = shopName.ifBlank { savedShopName }
+    val effectiveShopUpiId = shopUpiId.ifBlank { savedShopUpiId }
+    var showAdvanceQrDialog by remember { mutableStateOf(false) }
     val allStaffMembers by (staffViewModel?.allStaff?.collectAsState(initial = emptyList()) ?: remember { mutableStateOf(emptyList<StaffEntity>()) })
     val activeStaff = remember(allStaffMembers) { allStaffMembers.filter { it.isActive } }
     val customers by customerViewModel.filteredCustomers.collectAsState()
@@ -270,7 +281,14 @@ fun OrderCreationWizardScreen(
         mutableStateOf(defaultGarmentName)
     }
     var currentItemQuantity by remember { mutableIntStateOf(1) }
-    var currentItemUnitPriceText by remember { mutableStateOf("600") }
+    var currentItemUnitPriceText by remember(selectedTemplateId, selectedTemplateObj) {
+        val price = if (selectedTemplateObj.defaultPrice > 0.0) {
+            selectedTemplateObj.defaultPrice.toInt().toString()
+        } else {
+            "500"
+        }
+        mutableStateOf(price)
+    }
     var stitchingInstructions by remember { mutableStateOf("Double stitching on side seams. Standard margin.") }
     var fabricDetails by remember { mutableStateOf("Client provided fabric") }
 
@@ -381,7 +399,7 @@ fun OrderCreationWizardScreen(
     val cartTotal = orderItems.sumOf { it.quantity * it.unitPrice }
     val totalAmount = if (orderItems.isNotEmpty()) cartTotal else (currentItemQuantity * currentItemUnitPrice)
 
-    var advanceAmountText by remember { mutableStateOf("500") }
+    var advanceAmountText by remember { mutableStateOf("") }
     val advanceAmount = advanceAmountText.toDoubleOrNull() ?: 0.0
     val balanceAmount = (totalAmount - advanceAmount).coerceAtLeast(0.0)
 
@@ -1058,7 +1076,7 @@ fun OrderCreationWizardScreen(
                                 Spacer(modifier = Modifier.width(6.dp))
 
                                 Surface(
-                                    color = DeepTeal.copy(alpha = 0.12f),
+                                    color = DeepTeal,
                                     shape = RoundedCornerShape(8.dp),
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(8.dp))
@@ -1066,49 +1084,20 @@ fun OrderCreationWizardScreen(
                                 ) {
                                     Row(
                                         verticalAlignment = Alignment.CenterVertically,
-                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp)
                                     ) {
                                         Icon(
                                             imageVector = Icons.Default.Edit,
                                             contentDescription = "Edit Measurements",
-                                            tint = DeepTeal,
+                                            tint = CardWhite,
                                             modifier = Modifier.size(14.dp)
                                         )
                                         Spacer(modifier = Modifier.width(4.dp))
                                         Text(
-                                            text = "Edit",
+                                            text = "Edit Measurements",
                                             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                            color = DeepTeal
+                                            color = CardWhite
                                         )
-                                    }
-                                }
-
-                                if (onRecordMeasurements != null) {
-                                    Spacer(modifier = Modifier.width(6.dp))
-                                    Surface(
-                                        color = DeepTeal.copy(alpha = 0.12f),
-                                        shape = RoundedCornerShape(8.dp),
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(8.dp))
-                                            .clickable { onRecordMeasurements(selectedCustomerId, selectedTemplateId) }
-                                    ) {
-                                        Row(
-                                            verticalAlignment = Alignment.CenterVertically,
-                                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                                        ) {
-                                            Icon(
-                                                imageVector = Icons.Default.Straighten,
-                                                contentDescription = "Measure",
-                                                tint = DeepTeal,
-                                                modifier = Modifier.size(14.dp)
-                                            )
-                                            Spacer(modifier = Modifier.width(4.dp))
-                                            Text(
-                                                text = "Measure",
-                                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                                color = DeepTeal
-                                            )
-                                        }
                                     }
                                 }
                             }
@@ -1117,7 +1106,7 @@ fun OrderCreationWizardScreen(
                         Spacer(modifier = Modifier.height(8.dp))
 
                         Text(
-                            text = "Measurements are specific to this garment. Tap 'Edit' to adjust values before booking.",
+                            text = "Measurements are specific to this garment. Tap 'Edit Measurements' or any value to adjust.",
                             style = MaterialTheme.typography.labelSmall,
                             color = CharcoalSubtle
                         )
@@ -1127,7 +1116,10 @@ fun OrderCreationWizardScreen(
                         FlowRow(
                             horizontalArrangement = Arrangement.spacedBy(6.dp),
                             verticalArrangement = Arrangement.spacedBy(6.dp),
-                            modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable { showMeasurementEditorDialog = true }
                         ) {
                             currentItemMeasurements.forEach { (pointKey, pointVal) ->
                                 Surface(
@@ -1466,15 +1458,47 @@ fun OrderCreationWizardScreen(
                 }
             }
 
-            // Section 6: Pricing & Financial Balance
+            // Section 5: Pricing & Financial Balance
             item {
                 TailorElevatedCard(modifier = Modifier.fillMaxWidth()) {
                     Column(modifier = Modifier.padding(14.dp)) {
-                        Text(
-                            text = "5. Pricing & Advance",
-                            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
-                            color = DeepTeal
-                        )
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = "5. Pricing & Advance",
+                                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                color = DeepTeal
+                            )
+
+                            Surface(
+                                color = DeepTeal.copy(alpha = 0.12f),
+                                shape = RoundedCornerShape(8.dp),
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable { showAdvanceQrDialog = true }
+                            ) {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.QrCode,
+                                        contentDescription = "UPI QR Code",
+                                        tint = DeepTeal,
+                                        modifier = Modifier.size(14.dp)
+                                    )
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text(
+                                        text = "UPI QR",
+                                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                        color = DeepTeal
+                                    )
+                                }
+                            }
+                        }
                         Spacer(modifier = Modifier.height(10.dp))
 
                         Row(
@@ -1494,7 +1518,17 @@ fun OrderCreationWizardScreen(
                                 value = advanceAmountText,
                                 onValueChange = { advanceAmountText = it },
                                 label = { Text("Advance Paid (₹)") },
+                                placeholder = { Text("0") },
                                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                                trailingIcon = {
+                                    IconButton(onClick = { showAdvanceQrDialog = true }) {
+                                        Icon(
+                                            imageVector = Icons.Default.QrCode,
+                                            contentDescription = "Show UPI QR Code",
+                                            tint = DeepTeal
+                                        )
+                                    }
+                                },
                                 shape = RoundedCornerShape(10.dp),
                                 modifier = Modifier.weight(1f)
                             )
@@ -2079,6 +2113,20 @@ fun OrderCreationWizardScreen(
             },
             containerColor = CardWhite,
             shape = RoundedCornerShape(16.dp)
+        )
+    }
+
+    if (showAdvanceQrDialog) {
+        val nextOrderNum = orderViewModel.getNextOrderNumber()
+        val qrAmount = if (advanceAmount > 0.0) advanceAmount else totalAmount
+        UpiPaymentQrDialog(
+            shopName = effectiveShopName,
+            orderNumber = nextOrderNum,
+            balanceAmount = qrAmount,
+            upiId = effectiveShopUpiId.ifBlank { "kethepalle@upi" },
+            titleAmountLabel = if (advanceAmount > 0.0) "Advance Amount" else "Order Total",
+            transactionNote = "Order #$nextOrderNum Advance Payment",
+            onDismiss = { showAdvanceQrDialog = false }
         )
     }
 }

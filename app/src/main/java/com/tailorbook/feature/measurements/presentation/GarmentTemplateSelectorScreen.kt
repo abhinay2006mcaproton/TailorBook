@@ -132,12 +132,12 @@ fun GarmentTemplateSelectorScreen(
 
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            text = stringResource(id = R.string.measurement_templates_title),
+                            text = if (customerId.isBlank()) "Garment Templates & Pricing" else stringResource(id = R.string.measurement_templates_title),
                             style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
                             color = CardWhite
                         )
                         Text(
-                            text = "For: $customerName",
+                            text = if (customerId.isBlank()) "Configure measurements & standard prices" else "For: $customerName",
                             style = MaterialTheme.typography.labelSmall,
                             color = SoftGold
                         )
@@ -236,8 +236,15 @@ fun GarmentTemplateSelectorScreen(
 
                     GarmentCard(
                         template = template,
-                        latestVersionNumber = latestVersion?.versionNumber,
-                        onClick = { onTemplateSelected(template.id) },
+                        latestVersionNumber = if (customerId.isNotBlank()) latestVersion?.versionNumber else null,
+                        onClick = {
+                            if (customerId.isNotBlank()) {
+                                onTemplateSelected(template.id)
+                            } else {
+                                editingTemplate = template
+                                showTemplateDialog = true
+                            }
+                        },
                         onEdit = {
                             editingTemplate = template
                             showTemplateDialog = true
@@ -255,13 +262,14 @@ fun GarmentTemplateSelectorScreen(
                 showTemplateDialog = false
                 editingTemplate = null
             },
-            onSave = { id, nameEn, nameTe, category, fields ->
+            onSave = { id, nameEn, nameTe, category, fields, price ->
                 viewModel.saveCustomTemplate(
                     id = id,
                     nameEn = nameEn,
                     nameTe = nameTe,
                     category = category,
-                    fields = fields
+                    fields = fields,
+                    defaultPrice = price
                 )
                 showTemplateDialog = false
                 editingTemplate = null
@@ -421,6 +429,21 @@ private fun GarmentCard(
                 color = CharcoalSubtle
             )
 
+            if (template.defaultPrice > 0) {
+                Spacer(modifier = Modifier.height(4.dp))
+                Surface(
+                    color = SoftGold.copy(alpha = 0.18f),
+                    shape = RoundedCornerShape(6.dp)
+                ) {
+                    Text(
+                        text = "Price: ₹${template.defaultPrice.toInt()}",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                        color = DeepTeal,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                    )
+                }
+            }
+
             Spacer(modifier = Modifier.height(8.dp))
 
             Row(
@@ -449,7 +472,7 @@ private fun GarmentCard(
 private fun GarmentTemplateEditorDialog(
     template: GarmentTemplate?,
     onDismiss: () -> Unit,
-    onSave: (id: String?, nameEn: String, nameTe: String?, category: GarmentCategory, fields: List<com.tailorbook.feature.measurements.domain.model.MeasurementField>) -> Unit,
+    onSave: (id: String?, nameEn: String, nameTe: String?, category: GarmentCategory, fields: List<com.tailorbook.feature.measurements.domain.model.MeasurementField>, defaultPrice: Double) -> Unit,
     onDelete: (id: String) -> Unit
 ) {
     val isEditing = template != null
@@ -457,6 +480,9 @@ private fun GarmentTemplateEditorDialog(
     var nameEn by remember { mutableStateOf(template?.getDisplayName() ?: "") }
     var nameTe by remember { mutableStateOf(template?.customNameTe ?: "") }
     var selectedCategory by remember { mutableStateOf(template?.category ?: GarmentCategory.WOMEN) }
+    var priceText by remember {
+        mutableStateOf(template?.defaultPrice?.takeIf { it > 0 }?.toInt()?.toString() ?: "350")
+    }
 
     val fields = remember {
         mutableStateListOf<com.tailorbook.feature.measurements.domain.model.MeasurementField>().apply {
@@ -547,6 +573,18 @@ private fun GarmentTemplateEditorDialog(
                             }
                         }
                     }
+                }
+
+                item {
+                    OutlinedTextField(
+                        value = priceText,
+                        onValueChange = { priceText = it },
+                        label = { Text("Standard Stitching Price (₹)") },
+                        placeholder = { Text("e.g. 350") },
+                        keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = androidx.compose.ui.text.input.KeyboardType.Number),
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
 
                 item {
@@ -658,7 +696,8 @@ private fun GarmentTemplateEditorDialog(
             Button(
                 onClick = {
                     if (nameEn.isNotBlank() && fields.isNotEmpty()) {
-                        onSave(templateId, nameEn, nameTe.ifBlank { null }, selectedCategory, fields.toList())
+                        val parsedPrice = priceText.toDoubleOrNull() ?: 0.0
+                        onSave(templateId, nameEn, nameTe.ifBlank { null }, selectedCategory, fields.toList(), parsedPrice)
                     }
                 },
                 enabled = nameEn.isNotBlank() && fields.isNotEmpty(),

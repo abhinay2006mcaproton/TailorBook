@@ -120,15 +120,17 @@ fun UpiPaymentQrDialog(
     orderNumber: String,
     balanceAmount: Double,
     upiId: String = "kethepalle@upi",
+    titleAmountLabel: String = "Collect Amount",
+    transactionNote: String? = null,
     onDismiss: () -> Unit
 ) {
     val context = LocalContext.current
-    val upiString = remember(upiId, shopName, balanceAmount, orderNumber) {
+    val upiString = remember(upiId, shopName, balanceAmount, orderNumber, transactionNote) {
         UpiQrHelper.buildUpiString(
             upiId = upiId,
             payeeName = shopName,
             amount = balanceAmount,
-            transactionNote = "Order $orderNumber Balance"
+            transactionNote = transactionNote ?: "Order $orderNumber Payment"
         )
     }
 
@@ -188,7 +190,7 @@ fun UpiPaymentQrDialog(
                     border = androidx.compose.foundation.BorderStroke(1.dp, SoftGold)
                 ) {
                     Text(
-                        text = "Collect Balance: " + FormattingUtils.formatCurrency(balanceAmount),
+                        text = "$titleAmountLabel: " + FormattingUtils.formatCurrency(balanceAmount),
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                         color = DeepTeal,
                         modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)

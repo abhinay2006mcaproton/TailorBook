@@ -201,7 +201,8 @@ fun TailorBookApp(
             currentRoute == Screen.PaymentList.route ||
             currentRoute == Screen.Reports.route ||
             currentRoute == Screen.StaffList.route ||
-            currentRoute == Screen.Subscription.route
+            currentRoute == Screen.Subscription.route ||
+            currentRoute?.startsWith("measurement_templates") == true
 
     com.tailorbook.ui.components.TailorNavigationDrawer(
         drawerState = drawerState,
@@ -226,6 +227,9 @@ fun TailorBookApp(
                     if (currentRoute != Screen.CustomerList.route) {
                         navController.navigate(Screen.CustomerList.route)
                     }
+                }
+                com.tailorbook.ui.components.DrawerDestination.GarmentTemplates -> {
+                    navController.navigate(Screen.GarmentTemplateSelector.createRoute(customerId = ""))
                 }
                 com.tailorbook.ui.components.DrawerDestination.Measurements -> {
                     navController.navigate(Screen.SelectCustomerForMeasurement.route)
@@ -278,7 +282,6 @@ fun TailorBookApp(
                 com.tailorbook.ui.components.DrawerDestination.HelpSupport -> {
                     showHelpSupportDialog = true
                 }
-                else -> { /* Coming in subsequent phases */ }
             }
         }
     ) {

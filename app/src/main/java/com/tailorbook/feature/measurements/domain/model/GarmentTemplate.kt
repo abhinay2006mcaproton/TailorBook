@@ -38,7 +38,8 @@ data class GarmentTemplate(
     val customNameTe: String? = null,
     val fields: List<MeasurementField>,
     val icon: ImageVector = Icons.Default.Checkroom,
-    val isCustom: Boolean = false
+    val isCustom: Boolean = false,
+    val defaultPrice: Double = 0.0
 ) {
     fun getDisplayName(): String {
         return customNameEn ?: id.lowercase().replaceFirstChar { it.uppercase() }
@@ -58,6 +59,7 @@ object GarmentTemplates {
         category = GarmentCategory.WOMEN,
         titleRes = R.string.garment_blouse,
         icon = Icons.Default.Checkroom,
+        defaultPrice = 350.0,
         fields = listOf(
             MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder bone to shoulder bone", 14.0),
             MeasurementField("length", "Length", "పొడవు", "Shoulder to waist / hem length", 14.0),
@@ -81,6 +83,7 @@ object GarmentTemplates {
         category = GarmentCategory.WOMEN,
         titleRes = R.string.garment_kurti,
         icon = Icons.Default.DryCleaning,
+        defaultPrice = 450.0,
         fields = listOf(
             MeasurementField("shoulder", "Shoulder", "భుజం", "Across shoulders", 14.5),
             MeasurementField("length", "Length", "పొడవు", "Shoulder down to desired hem", 40.0),
@@ -101,6 +104,7 @@ object GarmentTemplates {
         category = GarmentCategory.WOMEN,
         titleRes = R.string.garment_churidar,
         icon = Icons.Default.AccessibilityNew,
+        defaultPrice = 400.0,
         fields = listOf(
             MeasurementField("length", "Full Length", "పూర్తి పొడవు", "Waist to ankle", 38.0),
             MeasurementField("waist_belt", "Waist / Belt", "నడుము / బెల్ట్", "Waist circumference with belt", 34.0),
@@ -117,6 +121,7 @@ object GarmentTemplates {
         category = GarmentCategory.WOMEN,
         titleRes = R.string.garment_dress,
         icon = Icons.Default.Palette,
+        defaultPrice = 800.0,
         fields = listOf(
             MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder width", 14.0),
             MeasurementField("full_length", "Full Length", "పూర్తి పొడవు", "Shoulder to bottom hem", 52.0),
@@ -134,6 +139,7 @@ object GarmentTemplates {
         category = GarmentCategory.MEN,
         titleRes = R.string.garment_shirt,
         icon = Icons.Default.Person,
+        defaultPrice = 450.0,
         fields = listOf(
             MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder point to point", 18.0),
             MeasurementField("length", "Shirt Length", "పొడవు", "Collar base to bottom hem", 29.0),
@@ -152,6 +158,7 @@ object GarmentTemplates {
         category = GarmentCategory.MEN,
         titleRes = R.string.garment_pants,
         icon = Icons.Default.Straighten,
+        defaultPrice = 500.0,
         fields = listOf(
             MeasurementField("length", "Outseam Length", "పొడవు", "Waistband to shoe top", 40.0),
             MeasurementField("waist", "Waist", "నడుము", "Where trouser waist sits", 34.0),
@@ -169,6 +176,7 @@ object GarmentTemplates {
         category = GarmentCategory.UNISEX,
         titleRes = R.string.garment_tshirt,
         icon = Icons.Default.ContentCut,
+        defaultPrice = 300.0,
         fields = listOf(
             MeasurementField("shoulder", "Shoulder", "భుజం", "Across back shoulders", 17.5),
             MeasurementField("length", "Length", "పొడవు", "Shoulder to hem", 28.0),
@@ -183,6 +191,7 @@ object GarmentTemplates {
         category = GarmentCategory.UNISEX,
         titleRes = R.string.garment_custom,
         icon = Icons.Default.Straighten,
+        defaultPrice = 500.0,
         fields = listOf(
             MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder measurement", 15.0),
             MeasurementField("length", "Full Length", "పూర్తి పొడవు", "Primary garment length", 36.0),
@@ -212,8 +221,10 @@ object GarmentTemplates {
                 TSHIRT,
                 CUSTOM
             )
-            val dynamicFiltered = dynamicTemplates.filter { dt -> builtIn.none { it.id.equals(dt.id, ignoreCase = true) } }
-            return builtIn + dynamicFiltered
+            val dynamicMap = dynamicTemplates.associateBy { it.id.uppercase() }
+            val mergedBuiltIn = builtIn.map { b -> dynamicMap[b.id.uppercase()] ?: b }
+            val customOnly = dynamicTemplates.filter { dt -> builtIn.none { it.id.equals(dt.id, ignoreCase = true) } }
+            return mergedBuiltIn + customOnly
         }
 
     fun findById(id: String): GarmentTemplate {

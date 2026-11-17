@@ -658,7 +658,11 @@ fun TailorBookNavGraph(
         composable(
             route = Screen.GarmentTemplateSelector.route,
             arguments = listOf(
-                navArgument("customerId") { type = NavType.StringType },
+                navArgument("customerId") {
+                    type = NavType.StringType
+                    nullable = true
+                    defaultValue = null
+                },
                 navArgument("familyMemberId") {
                     type = NavType.StringType
                     nullable = true
@@ -668,8 +672,10 @@ fun TailorBookNavGraph(
         ) { backStackEntry ->
             val customerId = backStackEntry.arguments?.getString("customerId") ?: ""
             val familyMemberId = backStackEntry.arguments?.getString("familyMemberId")
-            val customer = customerViewModel.filteredCustomers.collectAsState().value
-                .find { it.customer.id == customerId }
+            val customer = if (customerId.isNotBlank()) {
+                customerViewModel.filteredCustomers.collectAsState().value
+                    .find { it.customer.id == customerId }
+            } else null
             val customerName = customer?.customer?.name ?: "Customer"
 
             GarmentTemplateSelectorScreen(
@@ -684,11 +690,13 @@ fun TailorBookNavGraph(
                 },
                 onNavigateBack = { navController.popBackStack() },
                 onTemplateSelected = { templateId ->
-                    val existing = measurementViewModel.getVersions(customerId, familyMemberId, templateId)
-                    if (existing.isNotEmpty()) {
-                        navController.navigate(Screen.MeasurementHistory.createRoute(customerId, templateId, familyMemberId))
-                    } else {
-                        navController.navigate(Screen.MeasurementEntry.createRoute(customerId, templateId, familyMemberId))
+                    if (customerId.isNotBlank()) {
+                        val existing = measurementViewModel.getVersions(customerId, familyMemberId, templateId)
+                        if (existing.isNotEmpty()) {
+                            navController.navigate(Screen.MeasurementHistory.createRoute(customerId, templateId, familyMemberId))
+                        } else {
+                            navController.navigate(Screen.MeasurementEntry.createRoute(customerId, templateId, familyMemberId))
+                        }
                     }
                 }
             )
@@ -900,6 +908,8 @@ fun TailorBookNavGraph(
                 onNavigateToUpgrade = {
                     navController.navigate(Screen.Subscription.route)
                 },
+                shopName = shopName,
+                shopUpiId = shopUpiId,
                 onOrderCreated = { newOrderId ->
                     val activity = context.findActivity()
                     if (activity != null) {

@@ -23,6 +23,7 @@
     <!-- Navigation Drawer -->
     <string name="nav_dashboard">Dashboard</string>
     <string name="nav_customers">Customers</string>
+    <string name="nav_garment_templates">Garment Templates &amp; Pricing</string>
     <string name="nav_measurements">Measurements</string>
     <string name="nav_orders">Orders</string>
     <string name="nav_delivery_calendar">Delivery Calendar</string>

@@ -47,7 +47,7 @@ import com.tailorbook.feature.staff.data.local.entity.StaffEntity
         StaffEntity::class,
         SyncQueueEntity::class
     ],
-    version = 9,
+    version = 10,
     exportSchema = false
 )
 abstract class TailorBookDatabase : RoomDatabase() {
@@ -66,6 +66,12 @@ abstract class TailorBookDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: TailorBookDatabase? = null
 
+        val MIGRATION_9_10 = object : androidx.room.migration.Migration(9, 10) {
+            override fun migrate(db: androidx.sqlite.db.SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE measurement_templates ADD COLUMN default_price REAL NOT NULL DEFAULT 0.0")
+            }
+        }
+
         fun getInstance(context: Context): TailorBookDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
@@ -73,6 +79,7 @@ abstract class TailorBookDatabase : RoomDatabase() {
                     TailorBookDatabase::class.java,
                     "tailorbook_db"
                 )
+                    .addMigrations(MIGRATION_9_10)
                     .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance

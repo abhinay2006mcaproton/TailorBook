@@ -20,10 +20,16 @@ sealed class Screen(val route: String) {
         fun createRoute(customerId: String) = "edit_customer/$customerId"
     }
 
-    object GarmentTemplateSelector : Screen("measurement_templates/{customerId}?familyMemberId={familyMemberId}") {
-        fun createRoute(customerId: String, familyMemberId: String? = null) =
-            if (familyMemberId != null) "measurement_templates/$customerId?familyMemberId=$familyMemberId"
-            else "measurement_templates/$customerId"
+    object GarmentTemplateSelector : Screen("measurement_templates?customerId={customerId}&familyMemberId={familyMemberId}") {
+        fun createRoute(customerId: String? = null, familyMemberId: String? = null): String {
+            val cid = customerId?.ifBlank { null }
+            val fmid = familyMemberId?.ifBlank { null }
+            return when {
+                cid != null && fmid != null -> "measurement_templates?customerId=$cid&familyMemberId=$fmid"
+                cid != null -> "measurement_templates?customerId=$cid"
+                else -> "measurement_templates"
+            }
+        }
     }
 
     object MeasurementEntry : Screen("measurement_entry/{customerId}/{templateId}?familyMemberId={familyMemberId}") {

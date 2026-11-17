@@ -28,6 +28,9 @@ data class MeasurementTemplateEntity(
     @ColumnInfo(name = "is_custom")
     val isCustom: Boolean = true,
 
+    @ColumnInfo(name = "default_price", defaultValue = "0.0")
+    val defaultPrice: Double = 0.0,
+
     @ColumnInfo(name = "created_at")
     val createdAt: Long = System.currentTimeMillis()
 )

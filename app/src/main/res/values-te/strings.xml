@@ -23,6 +23,7 @@
     <!-- Navigation Drawer -->
     <string name="nav_dashboard">డ్యాష్‌బోర్డ్</string>
     <string name="nav_customers">కస్టమర్లు</string>
+    <string name="nav_garment_templates">గార్మెంట్ టెంప్లేట్‌లు &amp; ధరలు</string>
     <string name="nav_measurements">కొలతలు</string>
     <string name="nav_orders">ఆర్డర్లు</string>
     <string name="nav_delivery_calendar">డెలివరీ క్యాలెండర్</string>

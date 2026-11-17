@@ -59,6 +59,7 @@ class MeasurementViewModel(
         nameTe: String? = null,
         category: GarmentCategory,
         fields: List<com.tailorbook.feature.measurements.domain.model.MeasurementField>,
+        defaultPrice: Double = 0.0,
         onSaved: () -> Unit = {}
     ) {
         viewModelScope.launch {
@@ -69,7 +70,8 @@ class MeasurementViewModel(
                 customNameEn = nameEn.trim(),
                 customNameTe = nameTe?.trim()?.ifBlank { null },
                 fields = fields,
-                isCustom = true
+                isCustom = true,
+                defaultPrice = defaultPrice
             )
             repository.saveCustomTemplate(template)
             onSaved()
