@@ -466,6 +466,7 @@ private fun GarmentTemplateEditorDialog(
                 // Pre-populate with typical measurement points
                 addAll(
                     listOf(
+                        com.tailorbook.feature.measurements.domain.model.MeasurementField("shoulder", "Shoulder", "భుజం", defaultVal = 14.5),
                         com.tailorbook.feature.measurements.domain.model.MeasurementField("length", "Length", "పొడవు", defaultVal = 36.0),
                         com.tailorbook.feature.measurements.domain.model.MeasurementField("chest_bust", "Chest / Bust", "ఛాతీ", defaultVal = 36.0),
                         com.tailorbook.feature.measurements.domain.model.MeasurementField("waist", "Waist", "నడుము", defaultVal = 32.0),

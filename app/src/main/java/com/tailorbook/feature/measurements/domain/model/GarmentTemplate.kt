@@ -59,11 +59,11 @@ object GarmentTemplates {
         titleRes = R.string.garment_blouse,
         icon = Icons.Default.Checkroom,
         fields = listOf(
+            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder bone to shoulder bone", 14.0),
             MeasurementField("length", "Length", "పొడవు", "Shoulder to waist / hem length", 14.0),
             MeasurementField("chest", "Bust / Chest", "ఛాతీ", "Around fullest part of bust", 36.0),
             MeasurementField("upper_chest", "Upper Chest", "పై ఛాతీ", "Above bust around armpits", 34.0),
             MeasurementField("waist", "Waist", "నడుము", "Around natural waist line", 30.0),
-            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder bone to shoulder bone", 14.0),
             MeasurementField("front_neck", "Front Neck", "ముందు మెడ", "Front neck depth", 6.5),
             MeasurementField("back_neck", "Back Neck", "వెనుక మెడ", "Back neck depth", 8.0),
             MeasurementField("armhole", "Armhole", "చంక చుట్టు", "Circumference around arm socket", 16.0),
@@ -82,11 +82,11 @@ object GarmentTemplates {
         titleRes = R.string.garment_kurti,
         icon = Icons.Default.DryCleaning,
         fields = listOf(
+            MeasurementField("shoulder", "Shoulder", "భుజం", "Across shoulders", 14.5),
             MeasurementField("length", "Length", "పొడవు", "Shoulder down to desired hem", 40.0),
             MeasurementField("bust", "Bust", "ఛాతీ", "Around fullest part of bust", 36.0),
             MeasurementField("waist", "Waist", "నడుము", "Around natural waist", 32.0),
             MeasurementField("hip", "Hip", "సీటు లూజు", "Around fullest part of hip", 38.0),
-            MeasurementField("shoulder", "Shoulder", "భుజం", "Across shoulders", 14.5),
             MeasurementField("armhole", "Armhole", "చంక చుట్టు", "Around armhole", 16.5),
             MeasurementField("sleeve_length", "Sleeve Length", "చేయి పొడవు", "Shoulder to cuff", 16.0),
             MeasurementField("sleeve_round", "Sleeve Round", "చేయి లూజు", "Around forearm / wrist", 10.0),
@@ -118,13 +118,13 @@ object GarmentTemplates {
         titleRes = R.string.garment_dress,
         icon = Icons.Default.Palette,
         fields = listOf(
+            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder width", 14.0),
             MeasurementField("full_length", "Full Length", "పూర్తి పొడవు", "Shoulder to bottom hem", 52.0),
             MeasurementField("upper_body", "Body Length", "బాడీ పొడవు", "Shoulder to waist join", 15.0),
             MeasurementField("bust", "Bust", "ఛాతీ", "Fullest chest circumference", 36.0),
             MeasurementField("waist", "Waist", "నడుము", "Waist circumference", 30.0),
             MeasurementField("hip", "Hip", "సీటు లూజు", "Hip circumference", 38.0),
             MeasurementField("gher_flare", "Flare / Gher", "ఘేరా", "Total bottom circle flare", 120.0),
-            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder width", 14.0),
             MeasurementField("sleeve_length", "Sleeve Length", "చేయి పొడవు", "Sleeve length", 18.0)
         )
     )
@@ -135,11 +135,11 @@ object GarmentTemplates {
         titleRes = R.string.garment_shirt,
         icon = Icons.Default.Person,
         fields = listOf(
+            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder point to point", 18.0),
             MeasurementField("length", "Shirt Length", "పొడవు", "Collar base to bottom hem", 29.0),
             MeasurementField("chest", "Chest", "ఛాతీ", "Chest circumference", 40.0),
             MeasurementField("waist", "Waist", "నడుము", "Stomach / waist circumference", 36.0),
             MeasurementField("hip", "Hip", "సీటు", "Bottom hem hip width", 40.0),
-            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder point to point", 18.0),
             MeasurementField("sleeve_length", "Sleeve Length", "చేయి పొడవు", "Shoulder to wrist cuff", 24.5),
             MeasurementField("collar", "Collar / Neck", "కాలర్", "Neck circumference", 15.5),
             MeasurementField("cuff", "Cuff Round", "కఫ్", "Wrist cuff circumference", 9.5),
@@ -170,9 +170,9 @@ object GarmentTemplates {
         titleRes = R.string.garment_tshirt,
         icon = Icons.Default.ContentCut,
         fields = listOf(
+            MeasurementField("shoulder", "Shoulder", "భుజం", "Across back shoulders", 17.5),
             MeasurementField("length", "Length", "పొడవు", "Shoulder to hem", 28.0),
             MeasurementField("chest", "Chest", "ఛాతీ", "Chest circumference", 38.0),
-            MeasurementField("shoulder", "Shoulder", "భుజం", "Across back shoulders", 17.5),
             MeasurementField("sleeve_length", "Sleeve Length", "చేయి పొడవు", "Shoulder to sleeve hem", 8.5),
             MeasurementField("neck", "Neck Opening", "మెడ", "Neckband circumference", 16.0)
         )
@@ -184,11 +184,11 @@ object GarmentTemplates {
         titleRes = R.string.garment_custom,
         icon = Icons.Default.Straighten,
         fields = listOf(
+            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder measurement", 15.0),
             MeasurementField("length", "Full Length", "పూర్తి పొడవు", "Primary garment length", 36.0),
             MeasurementField("chest_bust", "Chest / Bust", "ఛాతీ", "Primary width measurement", 36.0),
             MeasurementField("waist", "Waist", "నడుము", "Waist circumference", 32.0),
             MeasurementField("hip", "Hip", "సీటు", "Hip circumference", 38.0),
-            MeasurementField("shoulder", "Shoulder", "భుజం", "Shoulder measurement", 15.0),
             MeasurementField("sleeve", "Sleeve", "చేయి పొడవు", "Sleeve length", 12.0)
         )
     )
