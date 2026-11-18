@@ -1,11 +1,277 @@
-<!-- Redirects or mirrors docs/privacy-policy.html for GitHub Pages root support -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=docs/privacy-policy.html" />
-    <script>window.location.href = "docs/privacy-policy.html";</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TailorBook</title>
+    <style>
+        :root {
+            --primary-teal: #0D5C58;
+            --accent-gold: #C29B38;
+            --dark-charcoal: #2D3142;
+            --muted-gray: #6B7280;
+            --light-bg: #F8F9FA;
+            --card-white: #FFFFFF;
+            --border-color: #E5E7EB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--dark-charcoal);
+            background-color: var(--light-bg);
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--card-white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(13, 92, 88, 0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-teal);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            background: var(--primary-teal);
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            color: var(--primary-teal);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            color: var(--muted-gray);
+            font-size: 14px;
+        }
+
+        h2 {
+            color: var(--primary-teal);
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 6px;
+            color: var(--dark-charcoal);
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: #374151;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #374151;
+        }
+
+        .highlight-box {
+            background-color: #F0FDF4;
+            border-left: 4px solid #16A34A;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #14532D;
+        }
+
+        .warning-box {
+            background-color: #FEF3C7;
+            border-left: 4px solid var(--accent-gold);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #78350F;
+        }
+
+        a {
+            color: var(--primary-teal);
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--muted-gray);
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 18px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="docs/privacy-policy.html">link to the TailorBook Privacy Policy</a>.</p>
+
+<div class="container">
+    <header>
+        <span class="brand-badge">Official Policy</span>
+        <h1>TailorBook — Privacy Policy</h1>
+        <div class="meta">
+            <strong>Application:</strong> TailorBook (Smart Boutique &amp; Tailoring Management)<br>
+            <strong>Effective Date:</strong> November 12, 2026 | <strong>Version:</strong> 1.0.0
+        </div>
+    </header>
+
+    <div class="highlight-box">
+        <strong>Privacy Commitment:</strong> TailorBook is architected with an <strong>offline-first design</strong>. Your customers' phone numbers, addresses, custom body measurements, and order logs reside locally on your device in secure sandbox storage. We never sell, rent, or trade your boutique records with any third party.
+    </div>
+
+    <h2>1. Introduction</h2>
+    <p>
+        TailorBook ("we", "us", or "our") provides digital workflow management software tailored for tailoring shops, fashion designers, and boutiques. This Privacy Policy governs your use of our mobile application across Android devices and describes how we handle information.
+    </p>
+
+    <h2>2. Information Collected and Handled</h2>
+
+    <h3>A. Boutique &amp; Shop Owner Profile</h3>
+    <p>When you register or set up your boutique profile, we collect:</p>
+    <ul>
+        <li>Shop Name and Owner Name</li>
+        <li>Registered Mobile Number and Contact Email</li>
+        <li>Shop Business Address &amp; GSTIN (optional)</li>
+        <li>Boutique UPI ID (used solely for generating on-screen customer payment QR codes)</li>
+    </ul>
+
+    <h3>B. Customer Profiles &amp; Measurement Records</h3>
+    <p>To enable everyday boutique operations, the application allows you to input and manage:</p>
+    <ul>
+        <li>Customer names, telephone numbers, and delivery addresses.</li>
+        <li>Custom body measurements (blouses, dresses, kurtas, suits, lehengas).</li>
+        <li>Stitching notes, garment design sketches, reference photos, and optional voice notes.</li>
+        <li>Order statuses, pricing, advance deposits, and outstanding balance records.</li>
+    </ul>
+
+    <h3>C. Device &amp; Technical Identifiers</h3>
+    <ul>
+        <li><strong>Device Hardware Identifier:</strong> Used solely to enforce fair account use (preventing multiple duplicate trial registrations on a single device).</li>
+        <li><strong>Crash &amp; Diagnostic Logs:</strong> Anonymous stack traces used exclusively to fix application stability issues.</li>
+    </ul>
+
+    <h2>3. Cloud Synchronization &amp; Storage Security</h2>
+    <p>
+        TailorBook uses a local SQLite (Room) database inside your phone's private application sandbox. When cloud backup or sync is active:
+    </p>
+    <ul>
+        <li>Data is transmitted securely over TLS/HTTPS to our encrypted Supabase backend.</li>
+        <li>Strict <strong>Row Level Security (RLS)</strong> guarantees that each boutique's records are completely isolated and inaccessible to any other user.</li>
+        <li>You retain 100% ownership of your business data at all times.</li>
+    </ul>
+
+    <h2>4. Advertising &amp; Google AdMob</h2>
+    <p>
+        Free tier users receive advertisements powered by <strong>Google AdMob</strong>.
+    </p>
+    <ul>
+        <li>AdMob may collect and process device advertising identifiers (GAID) according to Google's Privacy Policy.</li>
+        <li>European Economic Area (EEA) and UK users are presented with a consent form via Google's <strong>User Messaging Platform (UMP)</strong> where personalized or non-personalized ad preferences can be reviewed and changed at any time in App Settings.</li>
+        <li><strong>Strict Ad Placement Policy:</strong> Advertisements never appear during critical tailor workflow moments (e.g., recording measurements, creating orders, generating invoices, or taking payments).</li>
+        <li>Upgrading to <strong>TailorBook Pro</strong> completely removes all third-party banner and rewarded advertisements.</li>
+    </ul>
+
+    <h2>5. Subscriptions &amp; Financial Transactions</h2>
+    <p>
+        All in-app purchases, monthly subscriptions, and annual passes are processed exclusively by <strong>Google Play In-App Billing</strong>.
+    </p>
+    <ul>
+        <li>TailorBook does not collect, process, or store credit card numbers, debit cards, net banking passwords, or bank account credentials.</li>
+        <li>All billing records, refunds, and renewals are securely governed by Google Play's Terms of Service.</li>
+        <li>Direct UPI QR payments generated in the app are peer-to-peer between your customer and your bank account. TailorBook takes 0% commission and never intercepts transaction funds.</li>
+    </ul>
+
+    <h2>6. Permissions Requested &amp; Why</h2>
+    <ul>
+        <li><strong>INTERNET &amp; ACCESS_NETWORK_STATE:</strong> Required for cloud synchronization, AdMob ads, and subscription verification.</li>
+        <li><strong>RECORD_AUDIO:</strong> Optional permission used solely if you record voice note instructions for a stitching order. Audio stays strictly on your local device.</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> Required on Android 13+ to remind you of promised customer delivery dates and order ready alerts.</li>
+        <li><strong>VIBRATE:</strong> Provides haptic tactile feedback when selecting measurements or completing an order.</li>
+    </ul>
+
+    <h2>7. Data Export, Retention &amp; Deletion Rights</h2>
+    <p>
+        We respect your fundamental right to access, backup, and delete your business data:
+    </p>
+    <ul>
+        <li><strong>Offline Backup Export:</strong> You can export your full customer and order database to a structured JSON file at any time via <em>Settings &rarr; Data Management &rarr; Export Backup to Phone</em> and save it to your phone, Google Drive, or WhatsApp.</li>
+        <li><strong>In-App Deletion:</strong> You can individually edit or delete customer profiles, orders, and measurements at any moment.</li>
+        <li><strong>Complete Account Deletion:</strong> You can request immediate and permanent erasure of your account and cloud-stored data by emailing our support desk or using the Account Deletion option in the app. All associated records will be permanently purged within 30 days.</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+        TailorBook is a business productivity application designed for boutique owners, tailors, and fashion creators. We do not knowingly solicit or collect personal data from children under the age of 13.
+    </p>
+
+    <h2>9. Contact Us</h2>
+    <p>
+        If you have questions, feedback, or data privacy requests regarding this policy, please contact our Data Protection desk:
+    </p>
+    <ul>
+        <li><strong>App:</strong> TailorBook</li>
+        <li><strong>Developer Contact:</strong> <a href="mailto:tailorbook.developer@gmail.com">tailorbook.developer@gmail.com</a></li>
+        <li><strong>Operating Country:</strong> India</li>
+    </ul>
+
+    <footer>
+        &copy; 2026 TailorBook. All rights reserved.<br>
+        Built with pride for local boutiques &amp; master tailors.
+    </footer>
+</div>
+
 </body>
 </html>

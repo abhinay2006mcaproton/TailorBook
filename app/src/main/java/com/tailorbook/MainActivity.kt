@@ -87,19 +87,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         handleDeepLink(intent)
 
-        // Request UMP Privacy Consent and initialize ads
-        try {
-            val consentManager = com.tailorbook.core.ads.GoogleUmpConsentManager(applicationContext)
-            consentManager.gatherConsent(this) { canRequest ->
-                timber.log.Timber.i("UMP Consent status: canRequestAds=$canRequest")
-            }
-        } catch (e: Exception) {
-            timber.log.Timber.w(e, "Failed to initialize UMP Consent Manager")
-        }
-
         setContent {
             TailorBookTheme {
                 TailorBookApp(initialDeepLinkRoute = deepLinkRoute.value)
+            }
+        }
+
+        // Request UMP Privacy Consent and initialize ads safely after view hierarchy is attached
+        lifecycleScope.launch {
+            try {
+                val consentManager = com.tailorbook.core.ads.GoogleUmpConsentManager(this@MainActivity)
+                consentManager.gatherConsent(this@MainActivity) { canRequest ->
+                    timber.log.Timber.i("UMP Consent status: canRequestAds=$canRequest")
+                }
+            } catch (e: Exception) {
+                timber.log.Timber.w(e, "Failed to initialize UMP Consent Manager")
             }
         }
     }
@@ -308,29 +310,6 @@ fun TailorBookApp(
                             style = MaterialTheme.typography.bodyMedium,
                             color = Charcoal
                         )
-
-                        androidx.compose.material3.OutlinedButton(
-                            onClick = {
-                                showHelpSupportDialog = false
-                                try {
-                                    val intent = Intent(Intent.ACTION_VIEW).apply {
-                                        data = android.net.Uri.parse("https://wa.me/919876543210?text=Hi%20TailorBook%20Support%2C%20I%20need%20help%20with%20my%20boutique%20app.")
-                                    }
-                                    context.startActivity(intent)
-                                } catch (e: Exception) {
-                                    Toast.makeText(context, "WhatsApp is not installed", Toast.LENGTH_SHORT).show()
-                                }
-                            },
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(8.dp),
-                            colors = androidx.compose.material3.ButtonDefaults.outlinedButtonColors(contentColor = DeepTeal),
-                            border = androidx.compose.foundation.BorderStroke(1.dp, MutedSage)
-                        ) {
-                            Text(
-                                text = stringResource(R.string.help_support_btn_whatsapp),
-                                style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold)
-                            )
-                        }
 
                         androidx.compose.material3.OutlinedButton(
                             onClick = {

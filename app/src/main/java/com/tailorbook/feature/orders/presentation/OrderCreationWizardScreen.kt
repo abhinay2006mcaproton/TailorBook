@@ -399,7 +399,7 @@ fun OrderCreationWizardScreen(
     val cartTotal = orderItems.sumOf { it.quantity * it.unitPrice }
     val totalAmount = if (orderItems.isNotEmpty()) cartTotal else (currentItemQuantity * currentItemUnitPrice)
 
-    var advanceAmountText by remember { mutableStateOf("") }
+    var advanceAmountText by remember { mutableStateOf("0") }
     val advanceAmount = advanceAmountText.toDoubleOrNull() ?: 0.0
     val balanceAmount = (totalAmount - advanceAmount).coerceAtLeast(0.0)
 
@@ -1094,7 +1094,7 @@ fun OrderCreationWizardScreen(
                                         )
                                         Spacer(modifier = Modifier.width(4.dp))
                                         Text(
-                                            text = "Edit Measurements",
+                                            text = "Edit",
                                             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
                                             color = CardWhite
                                         )
@@ -1106,7 +1106,7 @@ fun OrderCreationWizardScreen(
                         Spacer(modifier = Modifier.height(8.dp))
 
                         Text(
-                            text = "Measurements are specific to this garment. Tap 'Edit Measurements' or any value to adjust.",
+                            text = "Measurements are specific to this garment. Tap 'Edit' or any value to adjust.",
                             style = MaterialTheme.typography.labelSmall,
                             color = CharcoalSubtle
                         )

@@ -1,0 +1,52 @@
+================================================================================
+TAILORBOOK — GOOGLE PLAY STORE LISTING TEXT
+================================================================================
+
+1. APP TITLE (Max 30 characters):
+TailorBook: Boutique Manager
+
+2. SHORT DESCRIPTION (Max 80 characters):
+Digital ledger, measurements, orders, and UPI receipts for tailoring boutiques.
+
+3. FULL DESCRIPTION (Max 4000 characters):
+TailorBook is an offline-first smart digital ledger and management app designed specifically for boutique owners, fashion designers, and master tailors. Replace traditional paper measurement books and scattered diaries with a fast, organized, and secure digital notebook that works 100% offline.
+
+KEY FEATURES FOR YOUR BOUTIQUE:
+
+✂️ CUSTOM GARMENT MEASUREMENTS
+• Pre-built measurement templates for Blouse, Kurti, Salwar, Churidars, Gown, Shirts, and Trousers.
+• Move key points like Shoulder and Length to the top for rapid recording.
+• Immutable measurement version history (v1, v2, v3) so you always know what changed.
+• Add custom measurement points and standard stitching prices per garment.
+
+📋 ORDERS & DELIVERY SCHEDULE
+• Multi-garment order booking in a single customer invoice (e.g., 2 blouses + 1 lehenga).
+• Quick delivery presets (3 days, 5 days, 1 week, 2 weeks) with automated delivery calendar.
+• Assign cutting masters and tracking order statuses from New to Cutting, Stitching, and Ready.
+• Record stitching instruction voice notes and attach neck, sleeve, and fabric reference photos.
+
+💳 DYNAMIC UPI QR & ADVANCE COLLECTION
+• Present an instant on-screen UPI QR Code (PhonePe, Google Pay, Paytm, BHIM) to collect advances on the spot.
+• Automatic calculation of total bill, advance paid, and pending balance.
+• Direct peer-to-peer customer payment to your shop's bank account with 0% commission.
+
+🔒 100% OFFLINE-FIRST & PRIVATE
+• Full database stored locally on your device — works seamlessly in basements and areas with zero internet.
+• One-tap database backup export to your phone, Google Drive, or WhatsApp.
+• Zero personal data shared or sold to third parties.
+
+🌐 MULTI-LANGUAGE SUPPORT
+• Full interface support in English and Telugu (తెలుగు).
+• Indian currency numbering format (₹500, ₹1,500, ₹25,000).
+
+Whether you run a solo tailoring shop or a multi-master designer boutique, TailorBook saves you hours of paperwork, eliminates measurement disputes, and keeps your orders delivered on time.
+
+Download TailorBook today and modernize your boutique!
+
+================================================================================
+PRIVACY POLICY URL FOR GOOGLE PLAY CONSOLE:
+================================================================================
+Under Google Play Console -> Policy & programs -> App content -> Privacy policy:
+Paste your live GitHub Pages URL:
+https://abhinay2006mca.github.io/TailorBook/privacy-policy.html
+(Or: https://abhinay2006mca.github.io/TailorBook/)
